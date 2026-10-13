@@ -59,7 +59,7 @@ dialog{border:1px solid var(--bd);border-radius:22px;background:var(--c);color:v
 <div class="in mu" id="fc2" style="margin-top:26px;font-size:13px"></div></footer>
 <nav id="tabs"></nav><div id="toast"></div><dialog id="dlg"></dialog>
 <script>
-const API='https://script.google.com/macros/s/AKfycbydZGgxGDo2eb5_KL6-p7gLHLb11IElxG7e1WQt4XbF0Hhxf-_Z7D5u9TCSCSx1AYqC7g/exec';
+const API='https://script.google.com/macros/s/AKfycbwSe1I-p3TTpHsFWpC3RAg7ZhaI5t_hbOwOoghcOwf7O117Bzl7oy3E3nRIfWoydcBN/exec';
 const CATS=[['Строительство и ремонт','build'],['Грузчики и переезд','truck'],['Уборка','spark'],['Курьеры и доставка','box'],['Сад и огород','leaf'],['Репетиторство','book'],['Компьютеры и IT','laptop'],['Ремонт техники','gear'],['Мероприятия','party'],['Прочее','more']],CN=CATS.map(c=>c[0]),TYPES=['Нужен исполнитель','Предлагаю услуги'];
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])),ico=(n,c)=>`<svg class="ic ${c||''}"><use href="#i-${n}"/></svg>`,opt=(a,v,all)=>(all?'<option value="">'+all+'</option>':'')+a.map(x=>`<option ${x===v?'selected':''}>${esc(x)}</option>`).join(''),dt=t=>new Date(+t).toLocaleDateString('ru');
 let U=null,ADS=[],V='home',F={q:'',type:'',cat:'',city:''},tt;try{U=JSON.parse(localStorage.getItem('gig_u')||'null')}catch(e){}
