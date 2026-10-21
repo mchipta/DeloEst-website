@@ -172,30 +172,19 @@ button.padd{background:none;font-family:inherit}button.att{border:0;background:n
 .prose .abt p.lead{font-size:17px;font-weight:600;line-height:1.5}
 .cabt{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.cabt h2{margin:0}
 .gearb{width:44px;height:44px;border:0;background:none;color:var(--ac);display:grid;place-items:center;cursor:pointer;border-radius:14px;flex:none}.gearb .ic{width:26px;height:26px}
-
-
+.prof{position:relative}.prof .pn{padding-right:54px}.pedit{position:absolute;top:16px;right:16px;width:46px;height:46px;border:1px solid var(--bd);background:var(--c);color:var(--tx);border-radius:14px;display:grid;place-items:center;cursor:pointer}.pedit .ic{width:20px;height:20px}
+.prof .pbt{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}.prof .pbt .btn{justify-content:center;width:100%;min-height:42px;margin:0;white-space:nowrap;padding-left:8px;padding-right:8px;font-size:14px}.prof .pbt .pbw{grid-column:1/-1}
 .cg.one{grid-template-columns:1fr}
 .ctl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .ctl button{height:70px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0 4px;background:var(--c);border:1px solid var(--bd);border-radius:14px;color:var(--tx);font:inherit;font-weight:800;font-size:12.5px;cursor:pointer;transition:border-color .2s,transform .15s}.ctl button:hover{border-color:var(--ac);transform:translateY(-1px)}
 .bi{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none}.bi svg{width:64%;height:64%}.bi.bwa svg{width:68%;height:68%}.bi.cl2 svg{width:58%;height:58%}
 .bi.btg{background:#229ED9}.bi.bwa{background:#25D366}.bi.cl2{background:linear-gradient(135deg,var(--ac),var(--ac2))}
 
-.pf{position:relative;overflow:hidden;border-radius:30px;padding:20px 18px 18px;margin-bottom:16px;color:var(--tx);background:linear-gradient(180deg,color-mix(in srgb,var(--ac) 15%,var(--c)),var(--c) 60%);border:1px solid var(--bd);box-shadow:var(--sh)}
-.pft{display:flex;align-items:center;gap:16px}
-.pfa{width:88px;height:88px;border-radius:50%;padding:3px;box-sizing:border-box;background:linear-gradient(135deg,var(--ac),var(--ac2))}
-.pfa .av{width:100%;height:100%;border-radius:50%;border:3px solid var(--c);box-sizing:border-box;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;font-size:34px}
-.pfa .av img{border-radius:50%}
-.pf .avc{right:-2px;bottom:-2px;width:30px;height:30px;box-sizing:border-box;border-radius:50%;border:3px solid var(--c);background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;box-shadow:none}
-.pf .avc .ic{width:14px;height:14px}
-.pfi{min-width:0;flex:1}
-.pfn{display:block;font-size:24px;font-weight:800;line-height:1.15;overflow-wrap:anywhere}
-.pfl{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:14.5px;font-weight:600;color:var(--mu);overflow-wrap:anywhere}.pfl .ic{width:16px;height:16px;flex:none;color:var(--ac)}
-.pfb{display:flex;margin-top:18px;background:var(--bg2);border:1px solid var(--bd);border-radius:20px;overflow:hidden}
-.pfl.pfd{font-size:13px;font-weight:500}
-.pfc{flex:1;min-width:0;height:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:0 2px;border:0;background:none;color:var(--tx);font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;position:relative;transition:background .2s}
-.pfc+.pfc::before{content:"";position:absolute;left:0;top:14px;bottom:14px;border-left:1px solid var(--bd)}
-.pfc:hover{background:color-mix(in srgb,var(--ac) 8%,transparent)}
-.pfc .ic{width:23px;height:23px;color:var(--ac)}.pfc.out .ic{color:#e5484d}
+.prof{overflow:hidden}
+.pband{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;width:calc(100% + 40px);margin:2px -20px -20px;padding:14px 20px;background:linear-gradient(120deg,#d9451a,#e2701a);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.prof .pband .pc{background:none;border:0;border-radius:0;padding:0;font-size:14.5px;font-weight:700}
+.prof .pband .pc .ic{width:17px;height:17px}
+.prof .av{background:#fff;color:var(--ac)}
 </style><style id="msgr-css">
 /* ===== Мессенджер: список диалогов, чат, переключатели ===== */
 :root{--hh:64px}
@@ -297,7 +286,7 @@ html.m .card.ad2 .cth{width:92px;height:92px}html.m .card.ad2{gap:12px;padding:1
 /* ===== Кабинет ===== */
 .page.cab{max-width:820px}
 .prof{padding:16px 18px;gap:14px;border-radius:22px;margin-bottom:14px}
-.prof .av.xl{width:64px;height:64px;font-size:26px;border-radius:20px}
+.prof .av.xl{width:64px;height:64px;font-size:26px;border-radius:50%}
 .prof .pn{font-size:21px}
 .prof .pchips{margin-top:6px;gap:6px}.prof .pc{padding:3px 10px;font-size:13px}
 .prof .rmav{margin-top:6px}
@@ -775,8 +764,7 @@ function drawCab(){const j=CJ;if(CT==='in'&&j.inbox.some(r=>!r.st)){j.inbox.forE
  if(CT==='out')b=LS(j.sent.slice().reverse(),r=>{const mt=[payF(r.pay),r.city].filter(Boolean).map(esc).join(' · ');return `<div class="it"><div class="itm"><b${r.adId&&r.ad?` style="cursor:pointer" onclick="show('${r.adId}')"`:''}>${esc(r.ad||'Объявление удалено')}</b>${r.st?chip(r.st):'<span class="st2 mu">ждёт ответа</span>'}</div><div class="mu sm2">${mt?mt+' · ':''}отклик от ${dt(r.ts)}</div>${r.msg?`<div class="qt">${esc(r.msg)}</div>`:''}${r.ad?`<div class="acts">${r.pid?`<button class="btn sm" onclick="go('chat','${r.pid}_${r.adId}')">${ico('chat')}Написать автору</button>`:''}<button class="btn sm" onclick="show('${r.adId}')">${ico('box')}Объявление</button></div>`:''}</div>`},'Вы пока ни на что не откликались');
  if(CT==='set')b=setHead()+'<h4 class="sl">Данные профиля</h4>'+profCard()+'<h4 class="sl">Внешний вид</h4>'+themeCard()+nfCard()+`<div class="it"><b>Часовой пояс</b><div class="mu sm2">По нему показывается время откликов, сообщений и объявлений</div><select class="btn set-sel" onchange="setTZ(this.value)" aria-label="Часовой пояс">${TZS.map(z=>`<option value="${z[0]}"${(localStorage.getItem('gig_tz')||'')===z[0]?' selected':''}>${z[1]}</option>`).join('')}</select></div>`;
  const al=[];if(pend)al.push(`<button type="button" class="al" onclick="CT='in';drawCab()"><b>${pend}</b>${plr(pend,'новый отклик','новых отклика','новых откликов')}</button>`);if(UN)al.push(`<button type="button" class="al" onclick="go('msgs')"><b>${UN}</b>${plr(UN,'непрочитанное сообщение','непрочитанных сообщения','непрочитанных сообщений')}</button>`);
- $('#app').innerHTML=`<main class="page cab"><div class="cabt"><h2>Кабинет</h2><button type="button" class="gearb" aria-label="Настройки" title="Настройки" onclick="CT='set';drawCab()">${ico('gear')}</button></div><div class="pf"><div class="pft"><div class="avw pfa" role="button" tabindex="0" title="Фото профиля" onclick="avMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();avMenu()}"><input id="avf" type="file" accept="image/*" hidden onchange="upAv(this)">${av(U.name,U.avatar,'xl')}<span class="avc">${ico('camera')}</span></div><div class="pfi"><b class="pfn">${esc(U.name)}</b><div class="pfl">${ico(U.login.includes('@')?'mail':'user')}${esc(U.login.includes('@')?U.login:'@'+U.login)}</div>${U.phone?`<div class="pfl">${ico('phone')}${esc(fp(U.phone))}</div>`:''}${U.created?`<div class="pfl pfd">${ico('calendar')}${since(U.created)}</div>`:''}</div></div><div class="pfb"><button type="button" class="pfc" onclick="go('u','${U.pid}')">${ico('user')}Профиль</button><button type="button" class="pfc" onclick="CT='set';drawCab()">${ico('edit')}Изменить</button>${U.admin?`<button type="button" class="pfc" onclick="go('admin')">${ico('admin')}Админ</button>`:''}<button type="button" class="pfc out" onclick="U=null;keep();toast('Вы вышли из аккаунта');go('home')">${ico('logout')}Выйти</button></div></div>
-${al.length?`<div class="alerts">${al.join('')}</div>`:''}<div class="ctabs">${T.map(x=>`<button type="button" class="${CT===x[0]?'on':''}" onclick="CT='${x[0]}';drawCab()"><span class="ci">${ico(x[2])}${x[3]?`<b class="${x[4]?'hot':''}">${x[3]}</b>`:''}</span><span class="cl">${x[1]}</span></button>`).join('')}</div>${b}</main>`}
+ $('#app').innerHTML=`<main class="page cab"><div class="cabt"><h2>Кабинет</h2><button type="button" class="gearb" aria-label="Настройки" title="Настройки" onclick="CT='set';drawCab()">${ico('gear')}</button></div><div class="prof"><div class="avw" role="button" tabindex="0" title="Фото профиля" onclick="avMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();avMenu()}"><input id="avf" type="file" accept="image/*" hidden onchange="upAv(this)">${av(U.name,U.avatar,'xl')}<span class="avc">${ico('camera')}</span></div><div class="pm"><b class="pn">${esc(U.name)}</b></div><button type="button" class="pedit" aria-label="Изменить профиль" title="Изменить профиль" onclick="CT='set';drawCab()">${ico('edit')}</button><div class="pbt"><button class="btn sm" onclick="go('u','${U.pid}')">${ico('user')}Мой профиль</button><button class="btn sm" onclick="U=null;keep();toast('Вы вышли из аккаунта');go('home')">${ico('logout')}Выйти</button>${U.admin?`<button class="btn sm pbw" onclick="go('admin')">${ico('admin')}Админ-панель</button>`:''}</div><div class="pband"><span class="pc">${ico(U.login.includes('@')?'mail':'user')}${esc(U.login.includes('@')?U.login:'@'+U.login)}</span>${U.phone?`<span class="pc">${ico('phone')}${esc(fp(U.phone))}</span>`:''}${U.created?`<span class="pc pcd">${ico('calendar')}${since(U.created)}</span>`:''}</div></div>${al.length?`<div class="alerts">${al.join('')}</div>`:''}<div class="ctabs">${T.map(x=>`<button type="button" class="${CT===x[0]?'on':''}" onclick="CT='${x[0]}';drawCab()"><span class="ci">${ico(x[2])}${x[3]?`<b class="${x[4]?'hot':''}">${x[3]}</b>`:''}</span><span class="cl">${x[1]}</span></button>`).join('')}</div>${b}</main>`}
 async function rRej(id){if(!confirm('Отклонить этот отклик? Человек увидит, что его отклонили.'))return;try{await api('rej',{rid:id});toast('Отклик отклонён','ok');vCab()}catch(e){}}
 async function rDel(id){if(!confirm('Убрать этот отклик из списка?'))return;try{await api('rdel',{rid:id});toast('Отклик удалён','ok');vCab()}catch(e){}}
 async function pick(id,k){try{await api(k,{rid:id});toast(k==='pick'?'Исполнитель выбран':'Работа выполнена','ok',k==='fin'?'Теперь можно оставить друг другу отзыв':'');vCab()}catch(e){}}
