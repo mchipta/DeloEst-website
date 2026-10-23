@@ -406,7 +406,7 @@ main.cab .ctabs{grid-template-columns:repeat(3,1fr)}.shd{display:flex;align-item
 .adrl{display:flex;flex-direction:column;gap:6px;margin-top:8px}
 .adrb{display:flex;align-items:flex-start;gap:8px;text-align:left;width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:12px;background:var(--c);color:var(--tx);font:inherit;font-size:14px;cursor:pointer}
 .adrb:hover{border-color:var(--ac)}.adrb .ic{flex:none;margin-top:2px;color:var(--ac)}.adrb.man{justify-content:center;color:var(--ac);font-weight:700;margin-top:8px}
-.ad-loc{display:flex;gap:8px;align-items:center;font-weight:600}.ad-loc .ic{color:var(--ac)}
+.ad-loc{display:flex;gap:8px;align-items:center;font-weight:600}.ad-loc .ic{color:var(--ac)}.ad-loc.tap{cursor:pointer;margin-top:16px;padding:12px 14px;border:1px solid var(--bd);border-radius:14px;background:var(--c)}.ad-loc.tap span{flex:1}.ad-loc .lch{font-style:normal;font-size:22px;line-height:1;color:var(--mu);transform:rotate(90deg);transition:transform .2s}.ad-loc.on .lch{transform:rotate(-90deg)}
 a.btn{text-decoration:none;color:var(--tx)}a.btn.pri{color:#fff}
 </style>
 </head><body>
@@ -849,7 +849,7 @@ function mapLoad(){
  ['leaflet/1.9.4/leaflet.min.css','leaflet.markercluster/1.5.3/MarkerCluster.css','leaflet.markercluster/1.5.3/MarkerCluster.Default.css'].forEach(u=>{const l=document.createElement('link');l.rel='stylesheet';l.href=MAPCD+u;document.head.appendChild(l)});
  return MAPP=js('leaflet/1.9.4/leaflet.min.js').then(()=>js('leaflet.markercluster/1.5.3/leaflet.markercluster.js')).catch(e=>{MAPP=null;throw e});
 }
-const mapTiles=m=>L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(m);
+const mapTiles=m=>{try{m.attributionControl.setPrefix(false)}catch(e){}return L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(m)};
 const mapIcon=(t,ap)=>L.divIcon({className:'mpin t'+(t?1:0)+(ap?' ap':''),html:'<i></i>',iconSize:[30,38],iconAnchor:[15,36],popupAnchor:[0,-32]});
 function mapKill(){[MAP,AMAP,PMAP].forEach(m=>{if(m)try{m.remove()}catch(e){}});MAP=MCL=AMAP=PMAP=null;MT++;MF++}
 /* Поиск адреса в Nominatim (OSM): не чаще 1 запроса в секунду, как требуют правила сервиса */
@@ -893,9 +893,12 @@ async function mapFill(list){
 /* Мини-карта на странице объявления */
 function adMapBlock(x){
  const ll=llOf(x);if(!ll&&!x.addr&&!x.city)return'';
- setTimeout(()=>adMapInit(x),0);
- const q=encodeURIComponent(locStr(x)),ya=ll?`https://yandex.ru/maps/?pt=${ll[1]},${ll[0]}&z=16&l=map`:`https://yandex.ru/maps/?text=${q}`,rt=ll?`https://yandex.ru/maps/?rtext=~${ll[0]},${ll[1]}&rtt=auto`:'';
- return `<h3 class="ad-t">Где</h3><div class="ad-loc">${ico('pin')}<span>${esc(locStr(x))}</span></div><div id="amap" class="lmap sm"><div class="mload">Загружаем карту…</div></div><div class="mu sm2" id="amapn"></div><div class="acts" style="margin-top:10px"><a class="btn sm" href="${ya}" target="_blank" rel="noopener">Яндекс Карты</a>${rt?`<a class="btn sm" href="${rt}" target="_blank" rel="noopener">Маршрут</a>`:''}<a class="btn sm" href="https://2gis.ru/search/${q}" target="_blank" rel="noopener">2ГИС</a></div>`}
+ return `<div class="ad-loc tap" id="aloc" role="button" tabindex="0" onclick="adMapToggle('${esc(x.id)}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();adMapToggle('${esc(x.id)}')}">${ico('pin')}<span>${esc(locStr(x))}</span><i class="lch">›</i></div><div id="amapw" hidden><div id="amap" class="lmap sm"><div class="mload">Загружаем карту…</div></div><div class="mu sm2" id="amapn"></div></div>`}
+function adMapToggle(id){
+ const x=ADS.find(a=>a.id===id),w=$('#amapw'),l=$('#aloc');if(!x||!w)return;
+ if(w.hidden){w.hidden=false;if(l)l.classList.add('on');adMapInit(x)}
+ else{w.hidden=true;if(l)l.classList.remove('on');if(AMAP){try{AMAP.remove()}catch(_){}AMAP=null}const e=$('#amap');if(e)e.innerHTML='<div class="mload">Загружаем карту…</div>';const n=$('#amapn');if(n)n.textContent=''}
+}
 async function adMapInit(x){
  const b=$('#amap');if(!b)return;
  try{await mapLoad()}catch(e){b.remove();return}
