@@ -455,7 +455,7 @@ document.addEventListener('focusin',e=>{if(e.target.matches&&e.target.matches('[
 ['scroll','resize'].forEach(t=>addEventListener(t,()=>{if(SGI&&$('#sg').className)sgShow(SGI)},{passive:true}));
 const IOS=/iphone|ipad/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1),AND=/android/i.test(navigator.userAgent),DESK=!IOS&&!AND,STAND=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
 /* Ссылка на APK приложения для Android (обновляйте при выходе новой сборки) */
-const APK='https://github.com/mchipta/delo-est-ap/releases/download/build-42/DeloEst.apk';
+const APK='https://github.com/mchipta/DeloEst-app-Android/releases/latest/download/DeloEst.apk';
 let APT='';
 addEventListener('beforeinstallprompt',e=>e.preventDefault());
 function apkGet(){toast('Скачивание началось','ok','Когда файл загрузится, откройте его и разрешите установку');location.href=APK}
@@ -943,8 +943,3 @@ async function mapPickShow(){
 async function mapAutoGeo(N){if(!N.ci.trim())return;try{const q=await geoQ(N.ci.trim()+', '+N.ad.trim(),1);if(q&&q[0]){N.la=Math.round(+q[0].lat*1e5)/1e5;N.ln=Math.round(+q[0].lon*1e5)/1e5}}catch(e){}}
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});addEventListener('hashchange',route);loadSite().then(route);if(U){refreshMe();pollUn()}
 </script></body></html>
-<style>
-  .leaflet-control-attribution {
-    display: none !important;
-  }
-</style>
