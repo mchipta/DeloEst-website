@@ -359,6 +359,28 @@ html.m #msh{display:none!important}html.m #tabs{left:50%!important;right:auto!im
 .nrest{display:flex;align-items:center;gap:8px;margin:10px 0 0;padding:8px 8px 8px 12px;border-radius:14px;background:color-mix(in srgb,var(--ac) 10%,transparent);border:1px solid color-mix(in srgb,var(--ac) 35%,transparent);font-weight:600;font-size:13.5px}.nrest span{flex:1}.nrest button{background:none;border:0;color:var(--ac);font:inherit;font-weight:800;cursor:pointer}.nrest .ic{color:var(--ac)}
 .pth{cursor:grab}.pcv{position:absolute;left:4px;bottom:4px;font-style:normal;font-size:10px;font-weight:700;color:#fff;background:rgba(0,0,0,.55);padding:2px 6px;border-radius:99px}.pdl{position:absolute;right:4px;top:4px;width:22px;height:22px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;cursor:pointer;line-height:1;padding:0}
 .pmv{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;padding:0 3px;pointer-events:none}.pmv button{pointer-events:auto;width:20px;height:20px;border-radius:50%;border:0;background:rgba(0,0,0,.5);color:#fff;cursor:pointer;line-height:1;font-size:14px;padding:0}.npv{cursor:default}.npf{margin-top:2px}
+.ad-loc.tap{display:flex;align-items:center;gap:12px;cursor:pointer;margin-top:16px;padding:14px;border:1px solid var(--bd);border-radius:18px;background:var(--c);transition:border-color .15s,transform .15s}.ad-loc.tap:hover{border-color:var(--ac)}.ad-loc.tap:active{transform:scale(.99)}
+.lic{width:42px;height:42px;border-radius:13px;background:color-mix(in srgb,var(--ac) 12%,transparent);color:var(--ac);display:grid;place-items:center;flex:none}.lic .ic{width:22px;height:22px}
+.ltx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.ltx b{font-size:15px;line-height:1.25;overflow-wrap:anywhere}.ltx small{font-size:12.5px;color:var(--mu);font-weight:500}
+.ad-loc .lch{font-style:normal;font-size:26px;line-height:1;color:var(--mu);transform:none}
+.locov{position:fixed;inset:0;z-index:300;background:var(--bg);display:flex;flex-direction:column}
+.locbar{display:flex;align-items:center;gap:12px;padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:var(--bg);font-size:18px}
+.locback{width:42px;height:42px;border-radius:13px;border:1px solid var(--bd);background:var(--c);color:var(--tx);display:grid;place-items:center;cursor:pointer}.locback .ic{width:20px;height:20px}
+.lmapfull{flex:1;min-height:0;position:relative;background:var(--bg2)}.lmapfull .mload{position:absolute;inset:0;display:grid;place-items:center;color:var(--mu)}
+.loccard{position:absolute;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:500;display:flex;align-items:center;gap:12px;padding:14px;border-radius:20px;background:var(--c);border:1px solid var(--bd);box-shadow:var(--sh);max-width:640px;margin:0 auto}
+main.cab .prof{background:var(--c);color:var(--tx);border:1px solid var(--bd);box-shadow:0 10px 28px color-mix(in srgb,var(--ac) 12%,transparent)}
+main.cab .prof .av{background:linear-gradient(120deg,var(--ac),var(--ac2));color:#fff;box-shadow:0 0 0 3px var(--c),0 0 0 5px var(--ac)}
+main.cab .prof .avc{background:var(--c);border:1px solid var(--bd)}
+main.cab .prof .pedit{background:var(--bg2);border-color:transparent}
+main.cab .prof .btn{background:var(--bg2);border:1px solid var(--bd);color:var(--tx)}
+main.cab .prof .btn.pri{background:linear-gradient(120deg,var(--ac),var(--ac2));border-color:transparent;color:#fff;box-shadow:0 6px 16px color-mix(in srgb,var(--ac) 32%,transparent)}
+main.cab .pband{background:var(--bg2);box-shadow:none;border-top:1px solid var(--bd)}
+main.cab .prof .pband .pc{color:var(--tx);font-weight:600}main.cab .prof .pband .pc .ic{color:var(--ac)}
+.ctabs{background:var(--c);padding:5px;border-radius:20px}
+.ctabs button{border-radius:15px;transition:background .15s,color .15s,box-shadow .15s}
+.ctabs button.on{background:linear-gradient(120deg,var(--ac),var(--ac2));color:#fff;box-shadow:0 6px 16px color-mix(in srgb,var(--ac) 35%,transparent)}
+.ctabs button.on .ci .ic{color:#fff}
+.ctabs button.on .ci b,.ctabs button.on .ci b.hot{background:#fff;color:var(--ac)}
 main.cab .ctabs{grid-template-columns:repeat(3,1fr)}.shd{display:flex;align-items:center;gap:12px;margin-bottom:6px}.sl{font-size:15.5px;margin:16px 2px 8px}
 
 /* ===== Тёмная тема: тёплый графит и оранжевый акцент ===== */
@@ -406,7 +428,7 @@ main.cab .ctabs{grid-template-columns:repeat(3,1fr)}.shd{display:flex;align-item
 .adrl{display:flex;flex-direction:column;gap:6px;margin-top:8px}
 .adrb{display:flex;align-items:flex-start;gap:8px;text-align:left;width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:12px;background:var(--c);color:var(--tx);font:inherit;font-size:14px;cursor:pointer}
 .adrb:hover{border-color:var(--ac)}.adrb .ic{flex:none;margin-top:2px;color:var(--ac)}.adrb.man{justify-content:center;color:var(--ac);font-weight:700;margin-top:8px}
-.ad-loc{display:flex;gap:8px;align-items:center;font-weight:600}.ad-loc .ic{color:var(--ac)}.ad-loc.tap{cursor:pointer;margin-top:16px;padding:12px 14px;border:1px solid var(--bd);border-radius:14px;background:var(--c)}.ad-loc.tap span{flex:1}.ad-loc .lch{font-style:normal;font-size:22px;line-height:1;color:var(--mu);transform:rotate(90deg);transition:transform .2s}.ad-loc.on .lch{transform:rotate(-90deg)}
+.ad-loc{display:flex;gap:8px;align-items:center;font-weight:600}.ad-loc .ic{color:var(--ac)}
 a.btn{text-decoration:none;color:var(--tx)}a.btn.pri{color:#fff}
 </style>
 </head><body>
@@ -789,7 +811,7 @@ function drawCab(){const j=CJ;if(CT==='in'&&j.inbox.some(r=>!r.st)){j.inbox.forE
  if(CT==='out')b=LS(j.sent.slice().reverse(),r=>{const mt=[payF(r.pay),r.city].filter(Boolean).map(esc).join(' · ');return `<div class="it"><div class="itm"><b${r.adId&&r.ad?` style="cursor:pointer" onclick="show('${r.adId}')"`:''}>${esc(r.ad||'Объявление удалено')}</b>${r.st?chip(r.st):'<span class="st2 mu">ждёт ответа</span>'}</div><div class="mu sm2">${mt?mt+' · ':''}отклик от ${dt(r.ts)}</div>${r.msg?`<div class="qt">${esc(r.msg)}</div>`:''}${r.ad?`<div class="acts">${r.pid?`<button class="btn sm" onclick="go('chat','${r.pid}_${r.adId}')">${ico('chat')}Написать автору</button>`:''}<button class="btn sm" onclick="show('${r.adId}')">${ico('box')}Объявление</button></div>`:''}</div>`},'Вы пока ни на что не откликались');
  if(CT==='set')b=setHead()+'<h4 class="sl">Данные профиля</h4>'+profCard()+'<h4 class="sl">Внешний вид</h4>'+themeCard()+nfCard()+`<div class="it"><b>Часовой пояс</b><div class="mu sm2">По нему показывается время откликов, сообщений и объявлений</div><select class="btn set-sel" onchange="setTZ(this.value)" aria-label="Часовой пояс">${TZS.map(z=>`<option value="${z[0]}"${(localStorage.getItem('gig_tz')||'')===z[0]?' selected':''}>${z[1]}</option>`).join('')}</select></div>`;
  const al=[];if(pend)al.push(`<button type="button" class="al" onclick="CT='in';drawCab()"><b>${pend}</b>${plr(pend,'новый отклик','новых отклика','новых откликов')}</button>`);if(UN)al.push(`<button type="button" class="al" onclick="go('msgs')"><b>${UN}</b>${plr(UN,'непрочитанное сообщение','непрочитанных сообщения','непрочитанных сообщений')}</button>`);
- $('#app').innerHTML=`<main class="page cab"><div class="cabt"><h2>Кабинет</h2><button type="button" class="gearb" aria-label="Настройки" title="Настройки" onclick="CT='set';drawCab()">${ico('gear')}</button></div><div class="prof"><div class="avw" role="button" tabindex="0" title="Фото профиля" onclick="avMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();avMenu()}"><input id="avf" type="file" accept="image/*" hidden onchange="upAv(this)">${av(U.name,U.avatar,'xl')}<span class="avc">${ico('camera')}</span></div><div class="pm"><b class="pn">${esc(U.name)}</b></div><button type="button" class="pedit" aria-label="Изменить профиль" title="Изменить профиль" onclick="CT='set';drawCab()">${ico('edit')}</button><div class="pbt"><button class="btn sm" onclick="go('u','${U.pid}')">${ico('user')}Мой профиль</button><button class="btn sm" onclick="U=null;keep();toast('Вы вышли из аккаунта');go('home')">${ico('logout')}Выйти</button>${U.admin?`<button class="btn sm pbw" onclick="go('admin')">${ico('admin')}Админ-панель</button>`:''}</div><div class="pband"><span class="pc">${ico(U.login.includes('@')?'mail':'user')}${esc(U.login.includes('@')?U.login:'@'+U.login)}</span>${U.phone?`<span class="pc">${ico('phone')}${esc(fp(U.phone))}</span>`:''}${U.created?`<span class="pc pcd">${ico('calendar')}${since(U.created)}</span>`:''}</div></div>${al.length?`<div class="alerts">${al.join('')}</div>`:''}<div class="ctabs">${T.map(x=>`<button type="button" class="${CT===x[0]?'on':''}" onclick="CT='${x[0]}';drawCab()"><span class="ci">${ico(x[2])}${x[3]?`<b class="${x[4]?'hot':''}">${x[3]}</b>`:''}</span><span class="cl">${x[1]}</span></button>`).join('')}</div>${b}</main>`}
+ $('#app').innerHTML=`<main class="page cab"><div class="cabt"><h2>Кабинет</h2><button type="button" class="gearb" aria-label="Настройки" title="Настройки" onclick="CT='set';drawCab()">${ico('gear')}</button></div><div class="prof"><div class="avw" role="button" tabindex="0" title="Фото профиля" onclick="avMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();avMenu()}"><input id="avf" type="file" accept="image/*" hidden onchange="upAv(this)">${av(U.name,U.avatar,'xl')}<span class="avc">${ico('camera')}</span></div><div class="pm"><b class="pn">${esc(U.name)}</b></div><button type="button" class="pedit" aria-label="Изменить профиль" title="Изменить профиль" onclick="CT='set';drawCab()">${ico('edit')}</button><div class="pbt"><button class="btn sm pri" onclick="go('u','${U.pid}')">${ico('user')}Мой профиль</button><button class="btn sm" onclick="U=null;keep();toast('Вы вышли из аккаунта');go('home')">${ico('logout')}Выйти</button>${U.admin?`<button class="btn sm pbw" onclick="go('admin')">${ico('admin')}Админ-панель</button>`:''}</div><div class="pband"><span class="pc">${ico(U.login.includes('@')?'mail':'user')}${esc(U.login.includes('@')?U.login:'@'+U.login)}</span>${U.phone?`<span class="pc">${ico('phone')}${esc(fp(U.phone))}</span>`:''}${U.created?`<span class="pc pcd">${ico('calendar')}${since(U.created)}</span>`:''}</div></div>${al.length?`<div class="alerts">${al.join('')}</div>`:''}<div class="ctabs">${T.map(x=>`<button type="button" class="${CT===x[0]?'on':''}" onclick="CT='${x[0]}';drawCab()"><span class="ci">${ico(x[2])}${x[3]?`<b class="${x[4]?'hot':''}">${x[3]}</b>`:''}</span><span class="cl">${x[1]}</span></button>`).join('')}</div>${b}</main>`}
 async function rRej(id){if(!confirm('Отклонить этот отклик? Человек увидит, что его отклонили.'))return;try{await api('rej',{rid:id});toast('Отклик отклонён','ok');vCab()}catch(e){}}
 async function rDel(id){if(!confirm('Убрать этот отклик из списка?'))return;try{await api('rdel',{rid:id});toast('Отклик удалён','ok');vCab()}catch(e){}}
 async function pick(id,k){try{await api(k,{rid:id});toast(k==='pick'?'Исполнитель выбран':'Работа выполнена','ok',k==='fin'?'Теперь можно оставить друг другу отзыв':'');vCab()}catch(e){}}
@@ -851,7 +873,7 @@ function mapLoad(){
 }
 const mapTiles=m=>{try{m.attributionControl.setPrefix(false)}catch(e){}return L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(m)};
 const mapIcon=(t,ap)=>L.divIcon({className:'mpin t'+(t?1:0)+(ap?' ap':''),html:'<i></i>',iconSize:[30,38],iconAnchor:[15,36],popupAnchor:[0,-32]});
-function mapKill(){[MAP,AMAP,PMAP].forEach(m=>{if(m)try{m.remove()}catch(e){}});MAP=MCL=AMAP=PMAP=null;MT++;MF++}
+function mapKill(){const lo=document.getElementById('locov');if(lo){lo.remove();document.body.style.overflow=''}[MAP,AMAP,PMAP].forEach(m=>{if(m)try{m.remove()}catch(e){}});MAP=MCL=AMAP=PMAP=null;MT++;MF++}
 /* Поиск адреса в Nominatim (OSM): не чаще 1 запроса в секунду, как требуют правила сервиса */
 function geoQ(q,n){const p=GQ.then(async()=>{const w=GT+1100-Date.now();if(w>0)await new Promise(r=>setTimeout(r,w));GT=Date.now();try{const r=await fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&limit='+(n||5)+'&accept-language=ru&countrycodes=ru,by,kz,uz&q='+encodeURIComponent(q));return r.ok?await r.json():null}catch(e){return null}});GQ=p.catch(()=>{});return p}
 const geoKey=c=>String(c).trim().toLowerCase().replace(/ё/g,'е');
@@ -893,23 +915,29 @@ async function mapFill(list){
 /* Мини-карта на странице объявления */
 function adMapBlock(x){
  const ll=llOf(x);if(!ll&&!x.addr&&!x.city)return'';
- return `<div class="ad-loc tap" id="aloc" role="button" tabindex="0" onclick="adMapToggle('${esc(x.id)}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();adMapToggle('${esc(x.id)}')}">${ico('pin')}<span>${esc(locStr(x))}</span><i class="lch">›</i></div><div id="amapw" hidden><div id="amap" class="lmap sm"><div class="mload">Загружаем карту…</div></div><div class="mu sm2" id="amapn"></div></div>`}
-function adMapToggle(id){
- const x=ADS.find(a=>a.id===id),w=$('#amapw'),l=$('#aloc');if(!x||!w)return;
- if(w.hidden){w.hidden=false;if(l)l.classList.add('on');adMapInit(x)}
- else{w.hidden=true;if(l)l.classList.remove('on');if(AMAP){try{AMAP.remove()}catch(_){}AMAP=null}const e=$('#amap');if(e)e.innerHTML='<div class="mload">Загружаем карту…</div>';const n=$('#amapn');if(n)n.textContent=''}
+ return `<div class="ad-loc tap" id="aloc" role="button" tabindex="0" onclick="adMapOpen('${esc(x.id)}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();adMapOpen('${esc(x.id)}')}"><span class="lic">${ico('pin')}</span><span class="ltx"><b>${esc(locStr(x))}</b><small>Показать на карте</small></span><i class="lch">›</i></div>`}
+function adMapOpen(id){
+ const x=ADS.find(a=>a.id===id);if(!x)return;adMapClose();
+ const o=document.createElement('div');o.id='locov';o.className='locov';o.setAttribute('role','dialog');o.setAttribute('aria-modal','true');o.setAttribute('aria-label','Где это находится');
+ o.innerHTML=`<div class="locbar"><button type="button" class="locback" aria-label="Назад" onclick="adMapClose()">${ico('arrow')}</button><b>Где это находится</b></div><div id="amap" class="lmapfull"><div class="mload">Загружаем карту…</div></div><div class="loccard"><span class="lic">${ico('pin')}</span><div class="ltx"><b>${esc(locStr(x))}</b><small id="amapn"></small></div></div>`;
+ document.body.appendChild(o);document.body.style.overflow='hidden';adMapInit(x)
 }
+function adMapClose(){
+ const o=$('#locov');if(AMAP){try{AMAP.remove()}catch(_){}AMAP=null}
+ if(o)o.remove();document.body.style.overflow=''
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#locov'))adMapClose()});
 async function adMapInit(x){
  const b=$('#amap');if(!b)return;
- try{await mapLoad()}catch(e){b.remove();return}
+ try{await mapLoad()}catch(e){b.innerHTML='<div class="mload">Карта не загрузилась</div>';return}
  let ll=llOf(x),ap=0;
  if(!ll&&x.city){const c=await geoCity(x.city);if(c){ll=c;ap=1}}
  const e=$('#amap');if(!e||e!==b)return;
- if(!ll){e.remove();return}
+ if(!ll){e.innerHTML='<div class="mload">Не удалось найти место на карте</div>';return}
  if(AMAP){try{AMAP.remove()}catch(_){}AMAP=null}
- e.innerHTML='';AMAP=L.map(e,{scrollWheelZoom:false}).setView(ll,ap?11:16);mapTiles(AMAP);
+ e.innerHTML='';AMAP=L.map(e).setView(ll,ap?11:16);mapTiles(AMAP);
  L.marker(ll,{icon:mapIcon(x.type===TYPES[1],ap)}).addTo(AMAP);
- const n=$('#amapn');if(n&&ap)n.textContent='Точный адрес не указан — метка показывает центр города';
+ const n=$('#amapn');if(n&&ap)n.textContent='Точный адрес не указан — метка в центре города';
  setTimeout(()=>{if(AMAP)AMAP.invalidateSize()},250)
 }
 /* Поле «Адрес» в форме объявления */
