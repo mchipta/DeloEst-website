@@ -466,18 +466,18 @@ a.btn{text-decoration:none;color:var(--tx)}a.btn.pri{color:#fff}
 .ad-loc.tap .lch{transition:transform .2s}.ad-loc.tap:hover .lch{transform:translateX(3px)}
 #intro{position:fixed;inset:0;z-index:1000;background:var(--bg);display:grid;place-items:center;animation:ifade .4s ease .85s forwards}
 html.noi #intro{display:none}
-#intro .ib{display:grid;justify-items:center;gap:16px}
-#intro .il{width:88px;height:88px;border-radius:27px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;box-shadow:0 18px 44px color-mix(in srgb,var(--ac) 40%,transparent);animation:ipop .6s cubic-bezier(.2,1.3,.4,1) both}
+#intro .intb{width:auto;padding:0;display:grid;justify-items:center;gap:16px}
+#intro .intl{width:88px;height:88px;border-radius:27px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;box-shadow:0 18px 44px color-mix(in srgb,var(--ac) 40%,transparent);animation:ipop .6s cubic-bezier(.2,1.3,.4,1) both}
 #intro svg{width:58px;height:58px;fill:none;stroke:#fff;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}
 #intro svg path{stroke-dasharray:12;stroke-dashoffset:12;animation:idraw .42s .32s ease-out forwards}
-#intro .itx{font-size:30px;font-weight:800;display:flex;opacity:0;animation:itxt .5s .45s cubic-bezier(.2,.8,.2,1) forwards}
+#intro .intt{font-size:30px;font-weight:800;display:flex;opacity:0;animation:itxt .5s .45s cubic-bezier(.2,.8,.2,1) forwards}
 @keyframes ipop{from{opacity:0;transform:scale(.4) rotate(-14deg)}to{opacity:1;transform:none}}
 @keyframes idraw{to{stroke-dashoffset:0}}
 @keyframes itxt{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @keyframes ifade{to{opacity:0;visibility:hidden;pointer-events:none}}
 @media(prefers-reduced-motion:reduce){#intro{display:none}#app.pin,.gr>*,.it,.locov,.loccard,.fv .ic{animation:none!important}}
 </style>
-</head><body><script>try{if(sessionStorage.getItem("gi"))document.documentElement.classList.add("noi")}catch(e){}</script><div id="intro" aria-hidden="true"><div class="ib"><div class="il"><svg viewBox="0 0 24 24"><path d="M8 12l3 3 5-6"/></svg></div><div class="itx">Дело<span class="gt">Есть</span></div></div></div><script>try{sessionStorage.setItem("gi","1")}catch(e){}(function(){var i=document.getElementById("intro"),v=window.visualViewport;function f(){if(!i||!v)return;i.style.inset="auto";i.style.left=v.offsetLeft+"px";i.style.top=v.offsetTop+"px";i.style.width=v.width+"px";i.style.height=v.height+"px"}f();if(v)v.addEventListener("resize",f)})();setTimeout(function(){var i=document.getElementById("intro");if(i)i.remove()},1300)</script>
+</head><body><script>try{if(sessionStorage.getItem("gi"))document.documentElement.classList.add("noi")}catch(e){}</script><div id="intro" aria-hidden="true"><div class="intb"><div class="intl"><svg viewBox="0 0 24 24"><path d="M8 12l3 3 5-6"/></svg></div><div class="intt">Дело<span class="gt">Есть</span></div></div></div><script>try{sessionStorage.setItem("gi","1")}catch(e){}(function(){var i=document.getElementById("intro"),v=window.visualViewport;function f(){if(!i||!v)return;i.style.inset="auto";i.style.left=v.offsetLeft+"px";i.style.top=v.offsetTop+"px";i.style.width=v.width+"px";i.style.height=v.height+"px"}f();if(v)v.addEventListener("resize",f)})();setTimeout(function(){var i=document.getElementById("intro");if(i)i.remove()},1300)</script>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9zM10 20a2 2 0 0 0 4 0"/></symbol><symbol id="i-bello" viewBox="0 0 24 24"><path d="M8.5 4.6A6 6 0 0 1 18 9c0 3 .7 4.9 1.5 6M6 9c0 6-2.5 7.5-2.5 7.5H15M10 20a2 2 0 0 0 4 0M3 3l18 18"/></symbol><symbol id="i-logo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="6"/><path d="M8 12l3 3 5-6"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
 <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
