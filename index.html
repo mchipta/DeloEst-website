@@ -817,7 +817,7 @@ async function vDone(){
  if(f)f.classList.add('busy');
  try{
   const b64=await new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(String(r.result).split(',')[1]||'');r.onerror=no;r.readAsDataURL(blob)});
-  const up=await api('upaud',{data:b64,mime,dur}),r=await api('send',{with:CURPID,adId:CURAD||'',text:'',imgs:[],aud:{id:up.id,dur}});
+  const up=await api('upaud',{data:b64,mime,dur}),r=await api('send',{with:CURPID,adId:CURAD||'',text:'',imgs:[],aud:{id:up.id,dur},defer:1});quiet('notify',{id:r.id});
   AUDC.set(up.id,URL.createObjectURL(blob));AUDM.set(up.id,mime);
   const nm={id:r.id,ts:r.ts,mine:true,text:'',st:'',img:[],aud:up.id+'|'+dur,ad:CURAD||'',adt:CURADT||''};
   if($('#ml .cctx')&&!CHS.size)$('#ml').innerHTML='';chatDraw([nm]);lastUp([nm])
@@ -860,7 +860,7 @@ async function vChat(a){nfPromptMsgs();EDID='';const[pid,adId]=String(a||'').spl
  $('#app').innerHTML=`<main class="page msgr ${sp?'split':'one'}">${sp?mList(pid)+'<section class="mpane">'+ch+'</section>':ch}</main>`;
  chatDraw(j.msgs,true);{const ml=$('#ml');ml.onclick=bmOpen;ml.oncontextmenu=bmOpen}CP=[];hasUp();stUp(j);bellUp($('#cbell'),isMuted(pid));if(!j.msgs.length)$('#ml').innerHTML='<div class="cctx">Напишите первое сообщение</div>';
  const ta=$('#ct'),grow=()=>{ta.style.height='auto';ta.style.height=Math.min(ta.scrollHeight,120)+'px'};
- const send=async()=>{if(EDID)return edSave();const t=ta.value.trim();if(!t&&!CP.length)return;const f=$('#cf');f.classList.add('busy');try{const imgs=await upImgs(CP),r=await api('send',{with:pid,adId:adId||'',text:t,imgs});ta.value='';ta.style.height='';CP=[];drawCp();if($('#ml .cctx')&&!CHS.size)$('#ml').innerHTML='';const nm={id:r.id,ts:r.ts,mine:true,text:t,st:'',img:imgs,ad:adId||'',adt:CURADT||''};chatDraw([nm]);lastUp([nm])}catch(e){}f.classList.remove('busy');hasUp();ta.focus()};
+ const send=async()=>{if(EDID)return edSave();const t=ta.value.trim();if(!t&&!CP.length)return;const f=$('#cf');f.classList.add('busy');try{const imgs=await upImgs(CP),r=await api('send',{with:pid,adId:adId||'',text:t,imgs,defer:1});quiet('notify',{id:r.id});ta.value='';ta.style.height='';CP=[];drawCp();if($('#ml .cctx')&&!CHS.size)$('#ml').innerHTML='';const nm={id:r.id,ts:r.ts,mine:true,text:t,st:'',img:imgs,ad:adId||'',adt:CURADT||''};chatDraw([nm]);lastUp([nm])}catch(e){}f.classList.remove('busy');hasUp();ta.focus()};
  $('#cf').onsubmit=e=>{e.preventDefault();send()};ta.addEventListener('input',()=>{grow();hasUp();const n=Date.now();if(ta.value&&!EDID&&n-TYL>3000){TYL=n;quiet('typing',{with:pid})}});ta.onkeydown=e=>{if(e.key==='Escape'&&EDID){e.preventDefault();edCancel();return}if(e.key==='Enter'&&!e.shiftKey&&!/Mobi|Android/i.test(navigator.userAgent)){e.preventDefault();send()}};
  clearInterval(CHT);CHT=setInterval(async()=>{if(V!=='chat'||document.hidden)return;const r=await quiet('thread',{with:pid,ad:adId||'',after:CHA});if(!r)return;if(r.msgs.length){chatDraw(r.msgs);lastUp(r.msgs)}chgUp(r.chg);stUp(r);tkUp(r.sts)},4000)}
 async function vProfile(pid){$('#app').innerHTML='<main class="page">'+skel(3)+'</main>';let j;try{j=await api('profile',{pid})}catch(e){go('home');return}if(V!=='u')return;RR=0;PRJ=j;PRP=pid;const blk=isBlk(pid);
