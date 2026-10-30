@@ -7,6 +7,10 @@
 <meta property="og:url" content="https://mchipta.github.io/DeloEst-website/"><meta property="og:image" content="https://mchipta.github.io/DeloEst-website/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="ДелоЕсть — подработка и разовые заказы рядом с домом">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="ДелоЕсть — подработка рядом с домом"><meta name="twitter:description" content="Найдите подработку или исполнителя на час: объявления, отклики и чат в одном месте."><meta name="twitter:image" content="https://mchipta.github.io/DeloEst-website/og-image.png"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><link rel="shortcut icon" href="favicon-32.png">
 <style>
+
+/* ===== UNIFIED DESIGN SYSTEM & STYLESHEET ===== */
+
+/* --- Section 0 --- */
 :root{--bg:#fdf8f3;--bg2:#f7efe6;--c:#fff;--tx:#1b1530;--mu:#6b6480;--bd:#eadfd3;--ac:#ff5a36;--ac2:#ff9f1c;--onac:#fff;--ok:#12a150;--dng:#c0262d;--sh:0 12px 32px rgba(120,70,30,.13);--r1:12px;--r2:16px;--r3:24px}
 [data-theme=dark]{--bg:#100e0d;--bg2:#171412;--c:#1c1917;--tx:#f6f0ea;--mu:#a89e96;--bd:#2e2926;--ac:#ff6b3d;--ac2:#ffa62b;--ok:#4ade80;--dng:#ff7a6e;--sh:0 12px 32px rgba(0,0,0,.45)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transition:background .3s,color .3s}
@@ -186,7 +190,8 @@ button.padd{background:none;font-family:inherit}button.att{border:0;background:n
 .prof .pband .pc .ic{width:17px;height:17px}
 .prof .av{background:#fff;color:var(--ac)}
 .ac .btn:not(.ib){min-height:42px;padding:0 16px;font-size:14.5px;border-radius:var(--r1)}.ac .btn:not(.ib) .ic{width:18px;height:18px}
-</style><style id="msgr-css">
+
+/* --- Section 1 --- */
 /* ===== Мессенджер: список диалогов, чат, переключатели ===== */
 :root{--hh:64px}
 .av.rd{border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;font-weight:800}
@@ -300,8 +305,8 @@ html.m.chatmode header,html.m.chatmode #tabs{display:none}
 .cedit b{color:var(--ac);font-size:13.5px}.cedit span{color:var(--mu);font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cedit button{all:unset;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;color:var(--mu);flex:none}
 .cedit button:hover{background:var(--bg2)}
-</style>
-<style id="msgr-css2">
+
+/* --- Section 2 --- */
 /* ===== Карточки объявлений: компактная миниатюра слева ===== */
 .card.ad2{display:flex;gap:14px;align-items:flex-start;padding:14px}
 .card.ad2 .cth{position:relative;flex:none;width:112px;height:112px;border-radius:var(--r1);overflow:hidden;background:var(--bg2)}
@@ -361,8 +366,8 @@ html.m .ctabs button{flex-direction:column;gap:4px;font-size:12.5px;padding:9px 
 .gr>*{min-width:0}
 @media(max-width:640px){.prof .pcd{display:none}.fchs button{font-size:13px;padding:6px 10px}.fchs button i{display:none}.ctabs button{font-size:12px}.al{font-size:14px}}
 html.m .prof .pcd{display:none}html.m .fchs button i{display:none}
-</style>
-<style id="msgr-css3">
+
+/* --- Section 3 --- */
 /* статус «в сети» на профиле и меню фото */
 .prof .cst{display:inline-flex;width:max-content;max-width:100%;gap:8px;padding:5px 12px;border-radius:99px;background:rgba(16,12,10,.58);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:14px;font-weight:600;line-height:1.25;min-height:0;backdrop-filter:blur(4px)}
 .prof .cst.on{color:#fff}
@@ -370,8 +375,8 @@ html.m .prof .pcd{display:none}html.m .fchs button i{display:none}
 .prof .cst:not(.on)::before{content:'';width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.6);flex:none}
 .prof .cst:empty{display:none}
 .psc button.dng{color:var(--dng)}
-</style>
-<style id="msgr-css4">
+
+/* --- Section 4 --- */
 /* фильтры объявлений в кабинете: цвета как у остальных активных элементов */
 .fchs button.on{background:linear-gradient(120deg,var(--ac),var(--ac2));color:#fff;border-color:transparent}
 .fchs button i{color:var(--tx);background:color-mix(in srgb,var(--mu) 20%,transparent)}
@@ -516,8 +521,8 @@ main.cab .ctabs{grid-template-columns:repeat(4,1fr)}.shd{display:flex;align-item
 .skd{display:flex;gap:12px;padding:12px;margin:0 0 10px;background:var(--c);border:1px solid var(--bd);border-radius:var(--r2)}
 .skd .av{width:46px;height:46px;border-radius:50%;flex:none}.skd>div{flex:1;min-width:0;display:grid;gap:8px;align-content:start}
 @media(prefers-reduced-motion:reduce){.skl{animation:none}}
-</style>
-<style id="map-css">
+
+/* --- Section 5 --- */
 .lmap{height:min(70vh,640px);min-height:380px;border-radius:var(--r2);overflow:hidden;border:1px solid var(--bd);position:relative;isolation:isolate;background:var(--bg2)}
 .lmap.sm{height:240px;min-height:0;margin-top:10px}
 .lmap .leaflet-container{width:100%;height:100%;font:inherit;background:var(--bg2)}
@@ -541,8 +546,8 @@ main.cab .ctabs{grid-template-columns:repeat(4,1fr)}.shd{display:flex;align-item
 .adrb:hover{border-color:var(--ac)}.adrb .ic{flex:none;margin-top:2px;color:var(--ac)}.adrb.man{justify-content:center;color:var(--ac);font-weight:700;margin-top:8px}
 .ad-loc{display:flex;gap:8px;align-items:center;font-weight:600}.ad-loc .ic{color:var(--ac)}
 a.btn{text-decoration:none;color:var(--tx)}a.btn.pri{color:#fff}
-</style>
-<style id="fx">
+
+/* --- Section 6 --- */
 @keyframes pgin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @keyframes cin{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
 @keyframes lov{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
@@ -651,8 +656,8 @@ html.m .ad-h .gal.ph{height:210px}
 html.m .ad-nav{top:12px;left:14px;right:14px}
 html.m .ad-h .mnu{top:60px;right:14px}
 html.m .adbar{left:50%!important;right:auto!important;width:min(402px,calc(100% - 28px))!important;transform:translateX(-50%)!important;bottom:calc(8px + env(safe-area-inset-bottom,0px))!important;animation-name:abad!important}
-</style>
-<style id="v6-search">
+
+/* --- Section 7 --- */
 /* v6: экран поиска (общий вид с приложением) */
 :root{--h0:#f08a24;--h1:#2f9bff;--h2:#a26bff;--h3:#22b573;--h4:#e8508f;--h5:#14b8c4}
 main.page.feed .sbar{margin-bottom:12px;height:60px;border-radius:20px;box-shadow:0 6px 18px color-mix(in srgb,var(--ac) 7%,transparent)}
@@ -692,6 +697,160 @@ main.page.feed .cc.on .ic{color:#fff;background:linear-gradient(120deg,var(--ac)
 .ntl.on .ic{color:#fff;background:linear-gradient(120deg,var(--ac),var(--ac2))}
 .emp0{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:36px 16px;color:var(--mu)}.emp0 .ic{width:46px;height:46px;padding:11px;box-sizing:border-box;border-radius:16px;color:var(--ac);background:color-mix(in srgb,var(--ac) 14%,var(--c))}.emp0 b{color:var(--tx);font-size:17px}.emp0 .btn{margin-top:8px}
 @media(prefers-reduced-motion:reduce){.cc .ic{transition:none}}
+
+/* ===== REFINED TACTILE SYSTEM & MOBILE SCROLL BUG FIXES ===== */
+:root {
+  --ac-glow: rgba(255, 87, 34, 0.22);
+}
+[data-theme=dark] {
+  --ac-glow: rgba(255, 107, 61, 0.25);
+}
+
+/* Fix mobile messenger scroll: lock viewport on chatmode so .msgs scrolls cleanly */
+.msgs {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-y !important;
+  overscroll-behavior: contain !important;
+  padding: 14px 14px 8px !important;
+  background: var(--bg2) !important;
+}
+
+html.chatmode {
+  height: 100% !important;
+  overflow: hidden !important;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+}
+html.chatmode body {
+  height: 100% !important;
+  overflow: hidden !important;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+}
+html.chatmode header,
+html.chatmode #tabs,
+html.chatmode footer {
+  display: none !important;
+}
+html.chatmode #app {
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+html.chatmode main.page.msgr {
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  max-width: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 0 !important;
+}
+html.chatmode .cht {
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  flex: 1 1 0 !important;
+}
+
+.msw, .mrow {
+  touch-action: pan-y !important;
+}
+
+/* Mobile responsive dialog list fixes: no nested overflow clipping */
+@media (max-width: 640px) {
+  #msh {
+    display: none !important;
+  }
+  .msgr.lst {
+    padding: 10px 0 96px !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    box-sizing: border-box !important;
+  }
+  .msgr.lst .mlist {
+    border-radius: 0 !important;
+    border-width: 1px 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    background: transparent !important;
+  }
+  .msgr.lst .mrows {
+    overflow-y: visible !important;
+    overscroll-behavior: auto !important;
+    height: auto !important;
+    flex: none !important;
+    background: var(--c) !important;
+  }
+}
+
+/* Tactile micro-interactions (human craftsmanship) */
+.btn {
+  transition: transform .18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .2s, background-color .2s, border-color .2s !important;
+}
+.btn:active, .cat:active, .card:active {
+  transform: scale(0.978) !important;
+}
+.btn.pri {
+  box-shadow: 0 4px 16px var(--ac-glow) !important;
+}
+.btn.pri:hover {
+  box-shadow: 0 6px 22px var(--ac-glow) !important;
+  transform: translateY(-2px) !important;
+}
+.card, .cat, .fq {
+  transition: transform .22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .22s, border-color .2s !important;
+}
+.card:hover, .cat:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: var(--sh) !important;
+}
+
+/* Warm, thoughtful empty state */
+.emp {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 12px !important;
+  padding: 36px 20px !important;
+  border: 1px dashed var(--bd) !important;
+  border-radius: var(--r3) !important;
+  background: color-mix(in srgb, var(--bg2) 40%, var(--c)) !important;
+  color: var(--mu) !important;
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+.emp .ic {
+  width: 44px !important;
+  height: 44px !important;
+  padding: 10px !important;
+  border-radius: 50% !important;
+  background: var(--bg2) !important;
+  color: var(--ac) !important;
+  stroke-width: 1.75 !important;
+}
+
 </style>
 </head><body><script>try{if(sessionStorage.getItem("gi"))document.documentElement.classList.add("noi")}catch(e){}</script><div id="intro" aria-hidden="true"><div class="intb"><div class="intl"><svg viewBox="0 0 24 24"><path d="M8 12l3 3 5-6"/></svg></div><div class="intt">Дело<span class="gt">Есть</span></div></div></div><script>try{sessionStorage.setItem("gi","1")}catch(e){}(function(){var i=document.getElementById("intro"),v=window.visualViewport;function f(){if(!i||!v)return;i.style.inset="auto";i.style.left=v.offsetLeft+"px";i.style.top=v.offsetTop+"px";i.style.width=v.width+"px";i.style.height=v.height+"px"}f();if(v)v.addEventListener("resize",f)})();setTimeout(function(){var i=document.getElementById("intro");if(i)i.remove()},1300)</script>
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -706,7 +865,7 @@ main.page.feed .cc.on .ic{color:#fff;background:linear-gradient(120deg,var(--ac)
 <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2"/></symbol>
 <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 7 9-7"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
 <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol><symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol><symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M8 7l4-4 4 4M7 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></symbol><symbol id="i-work" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/></symbol><symbol id="i-bolt2" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></symbol><symbol id="i-sendo" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M4.01 6.03l7.51 3.22-7.52-1 .01-2.22m7.5 8.72L4 17.97v-2.22l7.51-1M2.01 3L2 10l15 2-15 2 .01 7L23 12 2.01 3z"/></symbol><symbol id="i-sendr" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M3.4 20.4l17.45-7.48c.81-.35.81-1.49 0-1.84L3.4 3.6c-.66-.29-1.39.2-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91z"/></symbol><symbol id="i-open" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol><symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.1A9.8 9.8 0 0 1 12 6c6.4 0 10 6 10 6a17 17 0 0 1-3.2 3.9M6.6 7.7A17 17 0 0 0 2 12s3.6 7 10 7a9.9 9.9 0 0 0 4.2-.9"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol><symbol id="i-pub" viewBox="0 0 24 24"><path d="M5 4h14M12 20V9M7 13l5-5 5 5"/></symbol><symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></symbol><symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></symbol><symbol id="i-admin" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 9.5C8 19.2 5 15.5 5 11V6z"/><circle cx="12" cy="10" r="1.8"/><path d="M8.9 15a3.4 3.4 0 0 1 6.2 0"/></symbol><symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol><symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol><symbol id="i-vk" viewBox="0 0 24 24"><path d="M2.5 8.5l3.5 7 3.5-7M13.5 8.5v7M19.5 8.5L15 12l4.5 3.5"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.1"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol></defs></svg>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M8 7l4-4 4 4M7 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></symbol><symbol id="i-work" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/></symbol><symbol id="i-bolt2" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></symbol><symbol id="i-sendo" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M4.01 6.03l7.51 3.22-7.52-1 .01-2.22m7.5 8.72L4 17.97v-2.22l7.51-1M2.01 3L2 10l15 2-15 2 .01 7L23 12 2.01 3z"/></symbol><symbol id="i-sendr" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M3.4 20.4l17.45-7.48c.81-.35.81-1.49 0-1.84L3.4 3.6c-.66-.29-1.39.2-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91z"/></symbol><symbol id="i-open" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol><symbol id="i-eyeoff" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.1A9.8 9.8 0 0 1 12 6c6.4 0 10 6 10 6a17 17 0 0 1-3.2 3.9M6.6 7.7A17 17 0 0 0 2 12s3.6 7 10 7a9.9 9.9 0 0 0 4.2-.9"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol><symbol id="i-pub" viewBox="0 0 24 24"><path d="M5 4h14M12 20V9M7 13l5-5 5 5"/></symbol><symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></symbol><symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></symbol><symbol id="i-admin" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 9.5C8 19.2 5 15.5 5 11V6z"/><circle cx="12" cy="10" r="1.8"/><path d="M8.9 15a3.4 3.4 0 0 1 6.2 0"/></symbol><symbol id="i-mobile" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></symbol><symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol><symbol id="i-vk" viewBox="0 0 24 24"><path d="M2.5 8.5l3.5 7 3.5-7M13.5 8.5v7M19.5 8.5L15 12l4.5 3.5"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol><symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.5v.1"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol><symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol></defs></svg>
 <header><div class="in hd"><a class="logo" onclick="go('home')"><svg class="ic"><use href="#i-logo"/></svg><span>Дело<span class="gt">Есть</span></span></a>
 <nav class="lk"><a onclick="go('biz')">Для бизнеса</a><a onclick="go('about')">О нас</a><a onclick="jump('contacts')">Контакты</a></nav>
 <div class="ac"><button class="btn ib" id="msh" onclick="go('msgs')" aria-label="Сообщения"></button><button class="btn ib" id="fvh" onclick="go('fav')" aria-label="Избранное"></button><button class="btn ib" id="th" onclick="theme()" aria-label="Сменить тему"></button><button class="btn hide-m" id="adm" onclick="go('admin')" style="display:none">Админка</button><button class="btn sm hide-m" id="lg" onclick="go('cab')"></button><button class="btn hide-m" id="srch" onclick="go('list')"><svg class="ic"><use href="#i-search"/></svg>Поиск</button><button class="btn pri hide-m" onclick="go('new')"><svg class="ic"><use href="#i-plus"/></svg>Разместить</button></div></div></header>
@@ -857,7 +1016,7 @@ function bellUp(b,m){if(!b)return;b.innerHTML=ico(m?'bello':'bell');b.classList.
 async function delChat(pid,name,ad){if(!pid)return false;ad=ad||'';if(!confirm(`Удалить переписку с «${name||'пользователем'}»${ad?' по этому объявлению':''}?\nОна исчезнет только у вас, у собеседника останется.`))return false;try{await api('delChat',{with:pid,ad});DL=DL.filter(d=>!(d.pid===pid&&(d.ad||'')===ad));applyDl(DL,false);toast('Переписка удалена','ok');if(V==='chat'&&CURPID===pid&&(CURAD||'')===ad)go('msgs');return true}catch(e){return false}}
 (function(){let row=null,x0=0,y0=0,dx=0,drag=false;
 document.addEventListener('touchstart',e=>{const r=e.target.closest('.msw');if(!r||e.touches.length!==1){row=null;return}row=r;x0=e.touches[0].clientX;y0=e.touches[0].clientY;dx=0;drag=false},{passive:true});
-document.addEventListener('touchmove',e=>{if(!row)return;const t=e.touches[0],mx=t.clientX-x0,my=t.clientY-y0;if(!drag){if(Math.abs(my)>10&&Math.abs(my)>Math.abs(mx)){row=null;return}if(mx<-10&&Math.abs(mx)>Math.abs(my))drag=true;else return}dx=Math.max(-140,Math.min(0,mx));const a=row.querySelector('.mrow');a.style.transition='none';a.style.transform='translateX('+dx+'px)'},{passive:true});
+document.addEventListener('touchmove',e=>{if(!row)return;const t=e.touches[0],mx=t.clientX-x0,my=t.clientY-y0;if(!drag){if(Math.abs(my)>6){row=null;return}if(mx<-10&&Math.abs(mx)>Math.abs(my))drag=true;else return}dx=Math.max(-140,Math.min(0,mx));const a=row.querySelector('.mrow');a.style.transition='none';a.style.transform='translateX('+dx+'px)'},{passive:true});
 document.addEventListener('touchend',()=>{if(!row)return;const r=row,a=r.querySelector('.mrow');row=null;a.style.transition='transform .2s';a.style.transform='';if(drag&&dx<-80){const d=DL.find(x=>x.pid===r.dataset.pid&&(x.ad||'')===(r.dataset.ad||''));delChat(r.dataset.pid,d?d.name:'',r.dataset.ad||'')}drag=false});
 document.addEventListener('click',e=>{if(e.target.closest('.msw')&&e.detail&&Math.abs(dx)>10){e.preventDefault();e.stopPropagation();dx=0}},true)})();
 function muteChat(){const p=CURPID;if(!p)return;const on=!isMuted(p);setMute(p,CURNM,on);bellUp($('#cbell'),on);toast(on?'Уведомления выключены':'Уведомления включены','ok',CURNM);reUn();rowsRedraw()}
@@ -1023,7 +1182,7 @@ function toast(m,t,sub){const e=$('#toast'),k=t===1||t==='err'?'er':t==='hi'?'hi
 async function sha(s){try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){let x=5381;for(const c of s)x=(x*33^c.charCodeAt(0))>>>0;return'f'+x}}
 async function api(a,d){try{const r=await fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({a,t:U&&U.t,dev:devInfo(),ip:NET.ip,geo:NET.geo,...d})}),j=await r.json();if(!j.ok)throw j.err||'Ошибка';return j}
  catch(e){if(e==='auth'){U=null;keep();toast('Войдите заново',1);go('cab')}else toast(typeof e==='string'?(ERR[e]||e):'Нет связи с сервером. Проверьте интернет',1);throw e}}
-function head(){updTitle();$('#msh').style.display=U?'':'none';$('#msh').innerHTML=ico('chat')+(UN?`<b class="bdg">${UN}</b>`:'');$('#fvh').style.display=U&&V==='list'?'':'none';$('#fvh').innerHTML=ico('heart')+(FV.length?`<b class="bdg">${FV.length}</b>`:'');$('#lg').innerHTML=ico('user')+(U?'Кабинет':'Войти');$('#lg').classList.toggle('lgo',!U);$('#adm').style.display=U&&U.admin?'':'none';{let cur=({ad:'list',admin:'cab',chat:'msgs',fav:'list'})[V]||V;if(!U&&cur==='list')cur='home';const tb=U?[['list','search','Поиск'],['new','plus','Разместить'],['msgs','chat','Сообщения',UN],['cab','user','Кабинет']]:[['home','home','Главная'],['new','plus','Разместить'],['cab','user','Войти']];$('#tabs').innerHTML=tb.map(([v,i,t,bd])=>`<a class="${cur===v?'on':''}" onclick="go('${v}')"><span class="tic">${ico(i)}${bd?`<b class="tbd">${bd>99?'99+':bd}</b>`:''}</span>${t}</a>`).join('')}}
+function head(){updTitle();$('#msh').style.display=(U&&window.innerWidth>640)?'':'none';$('#msh').innerHTML=ico('chat')+(UN?`<b class="bdg">${UN}</b>`:'');$('#fvh').style.display=U&&V==='list'?'':'none';$('#fvh').innerHTML=ico('heart')+(FV.length?`<b class="bdg">${FV.length}</b>`:'');$('#lg').innerHTML=ico('user')+(U?'Кабинет':'Войти');$('#lg').classList.toggle('lgo',!U);$('#adm').style.display=U&&U.admin?'':'none';{let cur=({ad:'list',admin:'cab',chat:'msgs',fav:'list'})[V]||V;if(!U&&cur==='list')cur='home';const tb=U?[['list','search','Поиск'],['new','plus','Разместить'],['msgs','chat','Сообщения',UN],['cab','user','Кабинет']]:[['home','home','Главная'],['new','plus','Разместить'],['cab','user','Войти']];$('#tabs').innerHTML=tb.map(([v,i,t,bd])=>`<a class="${cur===v?'on':''}" onclick="go('${v}')"><span class="tic">${ico(i)}${bd?`<b class="tbd">${bd>99?'99+':bd}</b>`:''}</span>${t}</a>`).join('')}}
 function go(v,a){const h='#/'+v+(a?'/'+a:'');if(location.hash===h)nav(v,a);else location.hash=h}
 function route(){const[v,a]=location.hash.replace(/^#\/?/,'').split('/');if(a)AID=a;nav(v||'home',a)}
 async function nav(v,a){if(!['home','about','biz','app','list','new','cab','admin','ad','fav','u','chat','msgs','legal'].includes(v))v='home';if(['fav','chat','msgs'].includes(v)&&!U)v='cab';if(v==='home'&&U)v='list';clearInterval(CHT);mapKill();document.documentElement.classList.remove('chatmode','admode');{const ab=document.getElementById('adbar');if(ab){ab.hidden=true;ab.innerHTML=''}}{const ap=document.getElementById('app');if(ap){ap.classList.remove('pin');void ap.offsetWidth;ap.classList.add('pin')}}V=v;document.title=DT;head();scrollTo(0,0);if(v==='home')await vHome();else if(v==='about')vAbout();else if(v==='biz')vBiz();else if(v==='legal')await vLegal(a);else if(v==='app')vApp();else if(v==='u')await vProfile(a);else if(v==='chat')await vChat(a);else if(v==='msgs')await vMsgs();else if(v==='fav')await vFav();else if(v==='ad')await vAd();else if(v==='admin')await vAdmin();else if(v==='list')await vList();else if(v==='new')U?vNew():(toast('Войдите, чтобы разместить объявление',1),go('cab'));else U?await vCab():vAuth(RG?(RG=0,1):0);rv()}
@@ -1051,7 +1210,7 @@ ${U?'':`<section class="sec" id="how"><div class="in"><h2>Как это рабо
  await loadAds(()=>{const l=$('#lat');if(l){l.innerHTML=ADS.filter(a=>!isBlk(a.pid)).slice().sort((a,b)=>b.ts-a.ts).slice(0,U?6:4).map(card).join('')||'<p class="mu" style="text-align:center;grid-column:1/-1">Пока нет объявлений. Станьте первым!</p>';rv()}})}
 
 let LASTN=0;
-async function vList(){PG=12;$('#app').innerHTML=`<main class="page feed"><div class="sbar"><span class="sbi">${ico('search')}</span><input id="q" data-smart type="search" enterkeyhint="search" placeholder="Грузчик, уборка, ремонт…" autocomplete="off" value="${esc(F.q)}"><span class="sbd"></span><button type="button" class="sbf" id="fbtn" aria-label="Фильтры" onclick="fOpen()">${ico('sliders')}<i class="dot" hidden></i></button></div><div class="cats" id="cats"></div><div class="row" style="margin:6px 0 10px"><span id="cnt" class="mu"></span><div class="vmt" id="vmt"></div></div><div id="ssb" style="margin:-2px 0 10px"></div><div id="ads" class="gr one vm${LVM}" style="--n:2">${skelAd(6)}</div><div id="more" style="text-align:center;margin-top:16px"></div></main>`;
+async function vList(){PG=12;$('#app').innerHTML=`<main class="page feed"><div class="sbar"><span class="sbi">${ico('search')}</span><input id="q" data-smart type="search" enterkeyhint="search" placeholder="Грузчик, уборка, ремонт…" autocomplete="off" value="${esc(F.q)}"><span class="sbd"></span><button type="button" class="sbf" id="fbtn" aria-label="Фильтры" onclick="fOpen()">${ico('sliders')}<i class="dot" hidden></i></button></div><div class="cats" id="feed-cats"></div><div class="row" style="margin:6px 0 10px"><span id="cnt" class="mu"></span><div class="vmt" id="vmt"></div></div><div id="ssb" style="margin:-2px 0 10px"></div><div id="ads" class="gr one vm${LVM}" style="--n:2">${skelAd(6)}</div><div id="more" style="text-align:center;margin-top:16px"></div></main>`;
  $('#q').oninput=()=>{F.q=$('#q').value;PG=12;draw()};fChips();
  await loadAds(draw)}
 const CSH={'Строительство и ремонт':'Стройка и ремонт','Репетиторство':'Репетиторы'};
@@ -1167,7 +1326,7 @@ function vAuth(m,st){AST=st||1;const reg=m===1||m===true,rs=m==='reset',M=reg?'r
  if(M==='login')body=`${ef}<div class="nh" style="margin:-4px 4px 0"><span>Например: name@mail.ru или +7 900 123-45-67</span></div>${PW('Пароль','current-password')}<button class="btn pri">Войти</button><button type="button" class="lnk2" id="fg">Забыли пароль?</button><p class="agn">Входя в аккаунт, вы принимаете условия <a href="#/legal/offer" onclick="lgOpen('offer');return false">Пользовательского соглашения</a> и <a href="#/legal/privacy" onclick="lgOpen('privacy');return false">Политики конфиденциальности</a></p>`;
  else if(AST===1)body=`${reg?`<input id="a3" placeholder="Ваше имя" autocomplete="name" value="${esc(AD.name||'')}">${PHF()}`:''}${ef}${reg?PW('Пароль (от 6 символов)','new-password')+`<label class="agr"><input type="checkbox" id="a6"${AD.terms?' checked':''}><span>Я принимаю условия <a href="#/legal/offer" onclick="lgOpen('offer');return false">Пользовательского соглашения (оферты)</a> и <a href="#/legal/privacy" onclick="lgOpen('privacy');return false">Политики конфиденциальности</a>. Мне исполнилось 18 лет</span></label><label class="agr"><input type="checkbox" id="a7"${AD.pd?' checked':''}><span>Даю <a href="#/legal/consent" onclick="lgOpen('consent');return false">согласие на обработку персональных данных</a></span></label>`:''}<button class="btn pri">Получить код на почту</button>${reg?'':'<button type="button" class="btn" id="sw">Назад ко входу</button>'}`;
  else body=`<p class="mu" style="margin:0">Мы отправили 6-значный код на <b>${esc(AD.email)}</b>. Он действует 10 минут. Загляните и в папку «Спам».</p><input id="a5" class="code" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="••••••">${rs?PW('Новый пароль, от 6 символов','new-password'):''}<button class="btn pri">${reg?'Подтвердить и создать аккаунт':'Сменить пароль'}</button><button type="button" class="btn" id="rs" disabled>Отправить код ещё раз</button><button type="button" class="lnk2" id="ch">Изменить почту</button>`;
- $('#app').innerHTML=`<main class="page auth"><div class="acard"><h2>${{login:'Вход',reg:'Регистрация',reset:'Восстановление пароля'}[M]}</h2>${M!=='reset'&&AST===1?`<div class="seg eq"><button type="button" class="${M==='login'?'on':''}" onclick="AD={};vAuth(0)">Войти</button><button type="button" class="${M==='reg'?'on':''}" onclick="AD={};vAuth(1)">Регистрация</button></div>`:''}<p class="mu" style="margin:-6px 0 16px">${sub}</p><form class="f" id="f">${body}</form></div></main>`;
+ $('#app').innerHTML=`<main class="page auth"><div class="acard"><h2>${{login:'Вход',reg:'Регистрация',reset:'Восстановление пароля'}[M]}</h2>${M!=='reset'&&AST===1?`<div class="seg eq"><button type="button" class="${M==='login'?'on':''}" onclick="AD={};vAuth(0)">Войти</button><button type="button" class="${M==='reg'?'on':''}" onclick="AD={};vAuth(1)">Регистрация</button></div>`:''}<p class="mu" style="margin:-6px 0 16px">${sub}</p><form class="f" id="biz-form">${body}</form></div></main>`;
  const g=x=>$(x);if(g('#sw'))g('#sw').onclick=()=>{AD={};vAuth(0)};if(g('#fg'))g('#fg').onclick=()=>{AD={};vAuth('reset')};if(g('#ch'))g('#ch').onclick=()=>vAuth(reg?1:'reset',1);
  if(g('#rs')){const b=g('#rs');let n=60;const t=setInterval(()=>{if(!g('#rs')){clearInterval(t);return}if(n>0){b.textContent=`Отправить код ещё раз (${n--})`}else{b.textContent='Отправить код ещё раз';b.disabled=false;clearInterval(t)}},1000);b.onclick=async()=>{try{await api('sendCode',{email:AD.email,kind:reg?'reg':'reset'});toast('Новый код отправлен на почту');vAuth(reg?1:'reset',2)}catch(e){}}}
  $('#f').onsubmit=async e=>{e.preventDefault();const em=(g('#a1')?g('#a1').value:'').trim().toLowerCase(),ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -1246,10 +1405,10 @@ async function rDel(id){if(!confirm('Убрать этот отклик из с�
 async function pick(id,k){try{await api(k,{rid:id});toast(k==='pick'?'Исполнитель выбран':'Работа выполнена','ok',k==='fin'?'Теперь можно оставить друг другу отзыв':'');vCab()}catch(e){}}
 async function st(id,s){try{await api('status',{id,s});vCab()}catch(e){}}
 const lines=s=>String(s||'').split('\n').map(x=>x.trim()).filter(Boolean).map(x=>x.split('|').map(y=>y.trim())),prose=s=>String(s||'').split(/\n\s*\n/).map(p=>`<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join('');
-const DEF={pill:'Более 27 000 выполненных дел с 2021 года',h1a:'Подработка рядом —',h1b:'за пару минут',lead:'Находите заказы на день или исполнителей на час. Без комиссии, без посредников, прямо в вашем городе.',stats:'12400|исполнителей\n3800|заказчиков\n27000|выполненных дел\n4,8|средняя оценка',reviews:REV.map(r=>r.join('|')).join('\n'),faq:FAQ.map(r=>r.join('|')).join('\n'),year:'2026',
+const DEF={pill:'Более 27 000 выполненных дел с 2023 года',h1a:'Подработка рядом —',h1b:'за пару минут',lead:'Находите подработку на день или проверенных помощников на час. Без скрытых комиссий, напрямую между соседями в вашем городе.',stats:'12400|исполнителей\n3800|заказчиков\n27000|выполненных дел\n4,8|средняя оценка',reviews:REV.map(r=>r.join('|')).join('\n'),faq:FAQ.map(r=>r.join('|')).join('\n'),year:'2026',
 about:'ДелоЕсть появился в 2026 году в Первоуральске. Мы заметили, что люди ищут подработку в чатах и группах, а тем, кому нужна помощь, трудно быстро найти надёжного человека. Мы сделали одно место, где обе стороны встречаются за пару минут.\n\nМы не берём комиссию и не вмешиваемся в расчёты. Наша задача: чтобы объявления были понятными, а контакты находились быстро.\n\nСегодня ДелоЕсть пользуются тысячи людей: студенты, мастера, самозанятые и небольшие компании. Команда у нас небольшая, зато на письма мы отвечаем в тот же день.',
 biz:'Нужны люди на сезон, разгрузку, мероприятие или курьерскую доставку? ДелоЕсть помогает бизнесу быстро находить временных исполнителей.\n\nПубликуйте объявления без комиссии, получайте отклики в личном кабинете и связывайтесь с кандидатами напрямую. Постоянным заказчикам поможем оформить объявления и выбрать категории.\n\nОставьте заявку ниже, и мы перезвоним в рабочее время.',
-phone:'+7 (992) 027-33-43',email:'michipta@ya.ru',addr:'г. Первоуральск, ТРЦ Строитель, офис 57',hours:'Пн–Пт, 9:00–18:00',social:'Telegram и VK: @delo_est',foot:'Платформа подработок и разовых заказов. Основана в 2026 году в Первоуральске. Мы помогаем быстро находить работу на день и надёжных исполнителей рядом.',copy:'© 2026 ДелоЕсть. Все права защищены. Сервис публикует объявления пользователей и не является стороной сделки.'};
+phone:'+7 (992) 027-33-43',email:'michipta@ya.ru',addr:'г. Первоуральск, ТРЦ Строитель, офис 57',hours:'Пн–Пт, 9:00–18:00',social:'Telegram и VK: @delo_est',foot:'Платформа подработок и разовых заказов. Основана в 2026 году в Первоуральске. Мы помогаем быстро находить работу на день и надёжных исполнителей рядом.',copy:'© 2026 ДелоЕсть. Сделано с душой для Первоуральска и Свердловской области.'};
 let C=Object.assign({},DEF),AT='mod';
 function fillFoot(){$('#fa').textContent=C.foot;const p=$('#fp'),m=$('#fe');p.innerHTML=ico('phone')+`<span>${esc(fp(C.phone))}<small>Позвонить</small></span>`;p.href=tel(C.phone);m.innerHTML=ico('mail')+`<span>${esc(C.email)}<small>Написать на почту</small></span>`;m.href='mailto:'+C.email;$('#fd').innerHTML=ico('pin')+`<span>${esc(C.addr)}</span>`;$('#fhr').innerHTML=ico('clock')+`<span>${esc(C.hours)}<small>Часы работы</small></span>`;const nk=((String(C.social||'').match(/@([\w.\-]+)/)||[])[1]||'').trim(),soc=(id,ic,name,h,base)=>{const e=$(id),n=String(h||nk).replace(/^@/,'').trim();e.style.display=n?'':'none';if(n){e.innerHTML=ico(ic)+`<span>${name}</span>`;e.title=name+' @'+n;e.href=base+encodeURIComponent(n)}};soc('#ftg','send','Telegram',C.tg,'https://t.me/');soc('#fvk','vk','ВКонтакте',C.vk,'https://vk.com/');$('#fc2').textContent=C.copy}
 async function loadSite(){try{const j=await api('site');if(j.site)C=Object.assign({},DEF,JSON.parse(j.site))}catch(e){}fillFoot()}
@@ -1264,7 +1423,7 @@ async function lgOpen(k){if(!LGT[k])k='offer';lgClose();const m=document.createE
 function lgClose(){const m=document.getElementById('lgm');if(m)m.remove();document.body.style.overflow=''}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')lgClose()});
 function vAbout(){$('#app').innerHTML=`<main class="page prose"><h2>О нас</h2><div class="abt">${String(C.about||'').split(/\n\s*\n/).map(t=>t.trim()).filter(Boolean).map((t,i)=>`<p class="rv${i?'':' lead'}">${esc(t).replace(/\n/g,'<br>')}</p>`).join('')}</div></main>`}
-function vBiz(){$('#app').innerHTML=`<main class="page prose"><h2>Для бизнеса</h2>${prose(C.biz)}<h3 style="margin:18px 0 8px">Оставить заявку</h3><form class="f" id="f"><input id="b1" placeholder="Имя или компания"><input id="b2" placeholder="Телефон" autocomplete="tel"><textarea id="b3" placeholder="Что нужно сделать?"></textarea><button class="btn pri">Отправить заявку</button></form></main>`;
+function vBiz(){$('#app').innerHTML=`<main class="page prose"><h2>Для бизнеса</h2>${prose(C.biz)}<h3 style="margin:18px 0 8px">Оставить заявку</h3><form class="f" id="biz-form"><input id="b1" placeholder="Имя или компания"><input id="b2" placeholder="Телефон" autocomplete="tel"><textarea id="b3" placeholder="Что нужно сделать?"></textarea><button class="btn pri">Отправить заявку</button></form></main>`;
  $('#f').onsubmit=async e=>{e.preventDefault();try{await api('lead',{name:$('#b1').value,phone:$('#b2').value,msg:$('#b3').value});toast('Заявка отправлена, мы свяжемся с вами');$('#f').reset()}catch(e){}}}
 const adUrl=id=>location.origin+location.pathname+'#/ad/'+id;
 const adText=x=>[x.title,[payF(x.pay)||'Договорная',x.city].filter(Boolean).join(' · '),'Объявление на ДелоЕсть — подработка рядом с домом'].join('\n');
