@@ -907,13 +907,13 @@ main.page.feed .sbf .dot{top:-4px;right:-4px}
  .fsh .facts{position:fixed;left:16px;right:16px;bottom:calc(10px + env(safe-area-inset-bottom,0px));margin:0;padding:0;background:none;z-index:2}
  #myh,#fvh{display:none!important}
  .cab.my{padding-bottom:150px}
- .mybar{display:block;position:fixed;left:14px;right:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:39}
+ .mybar{display:block;position:fixed;left:14px;right:14px;bottom:calc(92px + env(safe-area-inset-bottom,0px));z-index:39}
  .mybar .btn{width:100%;justify-content:center;min-height:52px;font-size:16px;border-radius:18px;box-shadow:0 10px 24px color-mix(in srgb,var(--ac) 32%,transparent)}
  #tabs a{font-size:10px;padding:8px 2px}
 }
 html.m .fov{align-items:stretch;background:var(--c)}
 html.m .fsh{max-width:none;max-height:none;height:100%;border-radius:0;box-shadow:none}
-html.m .mybar{display:block;position:fixed;left:50%;transform:translateX(-50%);width:min(402px,calc(100% - 28px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:39}
+html.m .mybar{display:block;position:fixed;left:50%;transform:translateX(-50%);width:min(402px,calc(100% - 28px));bottom:calc(92px + env(safe-area-inset-bottom,0px));z-index:39}
 html.m .mybar .btn{width:100%;justify-content:center;min-height:52px;font-size:16px;border-radius:18px}
 html.m .cab.my{padding-bottom:150px}
 html.m #tabs a{font-size:10px;padding:8px 2px}
@@ -1698,7 +1698,7 @@ async function geoFill(){
  try{for(const x of ADS){if(V!=='list')break;if(llOf(x)||!x.city)continue;if(geoKey(x.city) in GC)continue;if(n>=10)break;n++;await geoCity(x.city);ch=1}}catch(e){}
  GFR=0;if(ch&&V==='list'&&$('#cnt'))draw()
 }
-if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});addEventListener('hashchange',route);loadSite().then(route);if(U){refreshMe();pollUn()}
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});addEventListener('hashchange',route);loadSite().then(route).then(()=>{try{geoAuto()}catch(e){}});if(U){refreshMe();pollUn()}
 
 /* Тактильный отклик на нажатия (Android; на iPhone браузер вибрацию не даёт) */
 try{if(navigator.vibrate&&!matchMedia('(prefers-reduced-motion:reduce)').matches){const hSel='button,a,summary,[role="button"],input[type="checkbox"],.btn,.card,.cat,.fv,.gbtn,.abq,#tabs a,.ro,.chp a,.chips a,.cc,.seg button,.seg2 button,.ctabs button,.fchs button,.prow,.mrow,.ntl,.ncb,.npb,.tpb';document.addEventListener('click',e=>{const el=e.target&&e.target.closest?e.target.closest(hSel):null;if(el)vib(el.classList.contains('fv')?18:10)},true)}}catch(e){}
