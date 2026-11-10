@@ -1182,6 +1182,58 @@ html.nohs .hs{display:none}
 .rxbar{display:flex;gap:2px;padding:4px 6px;border-bottom:1px solid var(--bd);margin-bottom:2px}
 .rxbar button{border:0;background:none;font-size:22px;padding:4px 6px;border-radius:10px;cursor:pointer;width:auto;display:block}
 .rxbar button:hover{background:var(--bg2)}
+.pav{display:inline-block;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--ac),var(--ac2))}
+.pav.free{background:var(--ok)}
+.pbi{margin-top:6px;line-height:1.35}
+.pchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pchip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:12px;border:1px solid color-mix(in srgb,var(--ac) 40%,transparent);background:color-mix(in srgb,var(--ac) 12%,transparent);color:var(--ac);font-weight:800;font-size:12.5px}
+.pchip.ok{border-color:color-mix(in srgb,var(--ok) 40%,transparent);background:color-mix(in srgb,var(--ok) 12%,transparent);color:var(--ok)}
+.pchip button{border:0;background:none;color:inherit;font-size:16px;line-height:1;cursor:pointer;padding:0}
+.chs{display:flex;flex-wrap:wrap;gap:8px}
+.pfr{margin-top:12px;border-top:1px solid var(--bd);padding-top:10px}
+.pfr small{display:block;font-weight:400}
+.pfr .gsw{flex:none;width:44px;height:26px;border-radius:99px;background:var(--bd);position:relative;transition:background .2s}
+.pfr .gsw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .2s}
+.pfr .gsw.on{background:var(--ok)}
+.pfr .gsw.on::after{left:21px}
+.prh{width:100%;display:flex;gap:20px;align-items:center;text-align:left;font:inherit;color:var(--tx);margin-top:14px;padding:16px;border-radius:22px;border:1px solid var(--bd);background:var(--c);cursor:pointer}
+.prn{display:grid;justify-items:center;gap:4px;flex:none}
+.prn b{font-size:44px;line-height:1;letter-spacing:-1px}
+.prn small{color:var(--mu)}
+.prb{flex:1;min-width:0;display:grid;gap:5px}
+.prb>div{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--mu)}
+.prb i{font-style:normal;width:12px;font-weight:700}
+.prb span{flex:1;height:6px;border-radius:4px;background:var(--bg2);overflow:hidden}
+.prb u{display:block;height:100%;background:#ffb400;border-radius:4px}
+.prb em{font-style:normal;width:22px;text-align:right}
+.ptabs{display:flex;gap:4px;margin:16px 0 12px;padding:4px;border-radius:16px;background:var(--bg2)}
+.ptabs button{flex:1;font:inherit;font-weight:800;font-size:14px;padding:10px 6px;border:1px solid transparent;border-radius:12px;background:none;color:var(--mu);cursor:pointer;white-space:nowrap}
+.ptabs button.on{background:var(--c);color:var(--tx);border-color:var(--bd)}
+.prv p{margin:6px 0 0}
+.pab h4{margin:18px 0 8px;font-size:17px}
+.pbio{margin:0;font-size:15.5px;line-height:1.4}
+.pprl{border:1px solid var(--bd);border-radius:16px;background:var(--c);overflow:hidden}
+.pprl>div{padding:11px 14px}
+.pprl>div+div{border-top:1px solid var(--bd)}
+.pgd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pgd>button,.pgi{position:relative;aspect-ratio:1;border:0;padding:0;border-radius:14px;overflow:hidden;background:var(--bg2);cursor:pointer}
+.pgd img,.pgi img{width:100%;height:100%;object-fit:cover;display:block}
+.pgi button{position:absolute;top:4px;right:4px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:16px;cursor:pointer}
+.pga{display:grid;place-items:center;border:1px dashed var(--bd)!important;color:var(--ac)}
+.pga .ic{width:28px;height:28px}
+.pbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--bd)}
+.pbar .btn{flex:1;justify-content:center;min-height:48px;border-radius:16px;font-size:14.5px;white-space:nowrap;padding:0 10px}
+.page.hb{padding-bottom:84px}
+.pofi{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;font:inherit;color:var(--tx);padding:12px 4px;border:0;border-bottom:1px solid var(--bd);background:none;cursor:pointer}
+.pofi span{display:grid;gap:2px;min-width:0}
+.pofi b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pofi i{font-style:normal;color:var(--mu);font-size:20px}
+.abf{max-height:90vh;overflow-y:auto}
+.abl{display:grid;gap:6px;font-weight:700;font-size:14px}
+.abl small{font-weight:400}
+.abl input,.abl textarea{font:inherit;font-weight:400}
+.abr{display:flex;gap:8px}
+.abr input{flex:1;min-width:0}
 </style>
 </head><body><script>try{if(sessionStorage.getItem("gi"))document.documentElement.classList.add("noi")}catch(e){}</script><div id="intro" aria-hidden="true"><div class="intb"><div class="intl"><svg viewBox="0 0 24 24"><path d="M8 12l3 3 5-6"/></svg></div><div class="intt">Дело<span class="gt">Есть</span></div></div></div><script>try{sessionStorage.setItem("gi","1")}catch(e){}(function(){var i=document.getElementById("intro"),v=window.visualViewport;function f(){if(!i||!v)return;i.style.inset="auto";i.style.left=v.offsetLeft+"px";i.style.top=v.offsetTop+"px";i.style.width=v.width+"px";i.style.height=v.height+"px"}f();if(v)v.addEventListener("resize",f)})();setTimeout(function(){var i=document.getElementById("intro");if(i)i.remove()},1300)</script>
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -1554,14 +1606,37 @@ async function vChat(a){nfPromptMsgs();EDID='';const[pid,adId]=String(a||'').spl
  chatDraw(j.msgs,true);{const ml=$('#ml');ml.onclick=bmOpen;ml.oncontextmenu=bmOpen}CP=[];hasUp();stUp(j);bellUp($('#cbell'),isMuted(pid));if(!j.msgs.length)$('#ml').innerHTML='<div class="cctx">Напишите первое сообщение</div>';
  const ta=$('#ct'),grow=()=>{ta.style.height='auto';ta.style.height=Math.min(ta.scrollHeight,120)+'px'},dk='gig_dr_'+pid+'_'+(adId||'');
  try{const dv=localStorage.getItem(dk);if(dv){ta.value=dv;grow();hasUp()}}catch(e){}
+ if(!ta.value&&CHPRE){ta.value=CHPRE;grow();hasUp()}CHPRE='';
  const send=async()=>{if(EDID)return edSave();const t=ta.value.trim();if(!t&&!CP.length)return;if(t&&chatRiskOut(t)&&!confirm('В сообщении похоже на номер карты или код из СМС. Такие данные нельзя передавать никому: так действуют мошенники.\n\nВсё равно отправить?'))return;const f=$('#cf');f.classList.add('busy');try{const imgs=await upImgs(CP),r=await api('send',{with:pid,adId:adId||'',text:t,imgs,defer:1,...(CRP?{reply:CRP.id}:{})});const rpl=CRP?{id:CRP.id,mine:CRP.mine,t:CRP.t}:null;rpClear();quiet('notify',{id:r.id});ta.value='';ta.style.height='';try{localStorage.removeItem(dk)}catch(e){}CP=[];drawCp();if($('#ml .cctx')&&!CHS.size)$('#ml').innerHTML='';const nm={id:r.id,ts:r.ts,mine:true,text:t,st:'',img:imgs,ad:adId||'',adt:CURADT||'',rp:rpl};chatDraw([nm]);lastUp([nm])}catch(e){}f.classList.remove('busy');hasUp();ta.focus()};
  $('#cf').onsubmit=e=>{e.preventDefault();send()};ta.addEventListener('input',()=>{grow();hasUp();if(!EDID){try{ta.value.trim()?localStorage.setItem(dk,ta.value):localStorage.removeItem(dk)}catch(e){}}const n=Date.now();if(ta.value&&!EDID&&n-TYL>3000){TYL=n;quiet('typing',{with:pid})}});ta.onkeydown=e=>{if(e.key==='Escape'&&EDID){e.preventDefault();edCancel();return}if(e.key==='Enter'&&!e.shiftKey&&!/Mobi|Android/i.test(navigator.userAgent)){e.preventDefault();send()}};
  clearInterval(CHT);CHT=setInterval(async()=>{if(V!=='chat'||document.hidden)return;const r=await quiet('thread',{with:pid,ad:adId||'',after:CHA});if(!r)return;if(r.msgs.length){chatDraw(r.msgs);lastUp(r.msgs)}chgUp(r.chg);stUp(r);tkUp(r.sts)},4000)}
-async function vProfile(pid){$('#app').innerHTML='<main class="page">'+skel(3)+'</main>';let j;try{j=await api('profile',{pid})}catch(e){go('home');return}if(V!=='u')return;RR=0;PRJ=j;PRP=pid;const blk=isBlk(pid);
- const rvf=!U||j.me?'':j.can?`<div class="rvf"><b>Оставить отзыв</b><div class="stin" id="stin">${[1,2,3,4,5].map(n=>`<button type="button" aria-label="Оценка ${n}" onclick="setR(${n})">★</button>`).join('')}</div><textarea id="rtx" placeholder="Как всё прошло? (необязательно)" style="min-height:80px"></textarea><button class="btn pri" onclick="sendRv('${pid}')">Отправить отзыв</button></div>`:`<div class="rvf"><span class="mu">Отзыв можно оставить после выполненной работы: заказчик отмечает её в разделе «Объявления».</span></div>`;
- $('#app').innerHTML=`<main class="page"><a class="back" onclick="PREV&&history.length>1?history.back():go('list')">${ico('arrow')}Назад</a><div class="prof pub">${!j.me?`<div class="ad-top"><button type="button" class="fv" aria-label="Ещё" onclick="advMenu(event)">${ico('more')}</button></div><div class="mnu" id="mnu" hidden><button type="button" onclick="$('#mnu').hidden=true;togBlk('${pid}','${esc(j.name)}')">${ico('eyeoff')}${blk?'Разблокировать':'Заблокировать'}</button><button type="button" onclick="$('#mnu').hidden=true;repSheet('user:${pid}','Пожаловаться')">${ico('alert')}Пожаловаться</button></div>`:''}<div class="pbody">${av(j.name,j.avatar,'xl')}<div class="pm"><b class="pn">${esc(j.name)}</b>${j.ver?`<span class="vb vbw" onclick="vInfo(event)">${VERI}Подтверждённый</span>`:''}<button type="button" class="prt" onclick="revOpen()"><span class="stars">★</span> ${j.rc?j.rt.toFixed(1)+' · '+j.rc+' '+pl(j.rc):'Пока нет отзывов'}<i>›</i></button></div></div>${(j.created||j.dn)?`<div class="pfoot"><span class="pdt">${j.created?ico('calendar')+since(j.created):''}</span>${j.dn?`<b class="pdn">Выполнено: ${j.dn}</b>`:''}</div>`:''}</div>
- <h3 style="margin:18px 0 10px">Объявления (${j.ads.length})</h3><div class="gr one" style="--n:2">${j.ads.map(card).join('')||empty('Активных объявлений нет')}</div>
- </main>`;rv()}
+let PTAB=0,CHPRE='';
+const pTabs=j=>[['Объявления · '+j.ads.length],['Отзывы · '+(j.rc||0)],['О себе']].map((x,i)=>`<button type="button" class="${PTAB===i?'on':''}" onclick="profTab(${i})">${x[0]}</button>`).join('');
+const pHero=j=>j.rc?`<button type="button" class="prh" onclick="revOpen()"><div class="prn"><b>${j.rt.toFixed(1)}</b><span class="stars">${'★'.repeat(Math.round(j.rt))}${'☆'.repeat(5-Math.round(j.rt))}</span><small>${j.rc} ${pl(j.rc)}</small></div><div class="prb">${[5,4,3,2,1].map(k=>`<div><i>${k}</i><span><u style="width:${Math.round(((j.dist||[])[k-1]||0)/j.rc*100)}%"></u></span><em>${(j.dist||[])[k-1]||0}</em></div>`).join('')}</div></button>`:'';
+const pCont=j=>{
+ if(PTAB===0)return `<div class="gr one" style="--n:2">${j.ads.map(card).join('')||empty('Активных объявлений нет')}</div>`;
+ if(PTAB===1)return (j.reviews||[]).slice(0,20).map(r=>`<div class="it prv"><div class="who"><b>${esc(r.name)}</b><span class="mu sm2">${dtS(r.ts)}</span></div><div class="stars">${'★'.repeat(Math.round(r.rating))}${'☆'.repeat(5-Math.round(r.rating))}</div>${r.text?`<p>${esc(r.text)}</p>`:''}${r.reply?`<div class="qt"><b>Ответ</b> ${esc(r.reply)}</div>`:''}</div>`).join('')||empty('Отзывов пока нет. Они появятся после первой выполненной работы.');
+ const em=!j.bio&&!(j.skills||[]).length&&!j.prices&&!(j.portfolio||[]).length,pr=String(j.prices||'').split('\n').map(x=>x.trim()).filter(Boolean);
+ return `<div class="pab">${em?`<p class="mu">${j.me?'Расскажите о себе: навыки, цены и фото работ помогают получать больше откликов.':'Человек пока ничего о себе не рассказал.'}</p>`:''}${j.bio?`<p class="pbio">${esc(j.bio)}</p>`:''}${(j.skills||[]).length?`<h4>Навыки</h4><div class="chs">${j.skills.map(x=>`<span class="pchip">${esc(x)}</span>`).join('')}</div>`:''}${pr.length?`<h4>Цены</h4><div class="pprl">${pr.map(x=>`<div>${esc(x)}</div>`).join('')}</div>`:''}${(j.portfolio||[]).length?`<h4>Фото работ</h4><div class="pgd">${j.portfolio.map((id,i)=>`<button type="button" onclick="lb(PRJ.portfolio,${i})"><img src="${IMG(id,400)}" alt="" loading="lazy"></button>`).join('')}</div>`:''}${j.me?`<button type="button" class="btn pri" style="margin-top:16px" onclick="abEdit()">${em?'Заполнить «О себе»':'Редактировать «О себе»'}</button>`:''}</div>`};
+function profTab(i){PTAB=i;const t=$('#ptabs'),c=$('#pcont');if(t)t.innerHTML=pTabs(PRJ);if(c)c.innerHTML=pCont(PRJ)}
+async function pFree(on){try{await api('free',{on});toast(on?'Вы отмечены как «Свободен сегодня» до конца дня':'Отметка снята');vProfile(PRP)}catch(e){}}
+function pWrite(){if(!U){go('cab');return}go('chat',PRP+'_')}
+function pOffer(){if(!U){go('cab');return}const mine=(typeof ADS!=='undefined'?ADS:[]).filter(a=>a.pid===U.pid&&(!a.status||a.status==='open'));if(!mine.length){toast('Сначала опубликуйте объявление, и мы предложим его этому человеку');return}
+ const o=document.createElement('div');o.id='pof';o.className='fov';o.onclick=e=>{if(e.target===o)o.remove()};o.innerHTML=`<div class="fsh rq" role="dialog" aria-modal="true" aria-label="Предложить задачу"><h3>Какую задачу предложить?</h3>${mine.map(a=>`<button type="button" class="pofi" onclick="pOfferGo('${a.id}')"><span><b>${esc(a.title)}</b><small class="mu">${esc([adPay(a),a.city].filter(Boolean).join(' · '))}</small></span><i>›</i></button>`).join('')}</div>`;document.body.appendChild(o)}
+function pOfferGo(id){const o=$('#pof');if(o)o.remove();CHPRE='Здравствуйте! У меня есть задача, посмотрите: '+adUrl(id);go('chat',PRP+'_'+id)}
+/* Редактор «О себе» */
+let AB=null;
+function abEdit(){if(!PRJ)return;AB={skills:(PRJ.skills||[]).slice(),photos:(PRJ.portfolio||[]).slice()};const o=document.createElement('div');o.id='abm';o.className='fov';o.onclick=e=>{if(e.target===o)abClose()};
+ o.innerHTML=`<div class="fsh rq abf" role="dialog" aria-modal="true" aria-label="О себе"><h3>О себе</h3><label class="abl">Коротко о вас<input id="ab-bio" maxlength="200" placeholder="Например: Грузчик с опытом 5 лет, свой транспорт" value="${esc(PRJ.bio||'')}"></label><div class="abl">Навыки <small class="mu">до 8 штук</small><div class="chs" id="ab-sk"></div><div class="abr"><input id="ab-skin" maxlength="24" placeholder="Например: сборка мебели" onkeydown="if(event.key==='Enter'){event.preventDefault();abSkill()}"><button type="button" class="btn" onclick="abSkill()">Добавить</button></div></div><label class="abl">Цены на услуги <small class="mu">каждая с новой строки</small><textarea id="ab-pr" maxlength="800" style="min-height:90px" placeholder="Сборка шкафа — от 800 ₽&#10;Переезд, 2 грузчика — 500 ₽/час">${esc(PRJ.prices||'')}</textarea></label><div class="abl">Фото работ <small class="mu" id="ab-pc"></small><div class="pgd" id="ab-ph"></div><input type="file" id="ab-f" accept="image/*" multiple hidden onchange="abFiles(this)"></div><div class="rqb"><button type="button" class="btn pri" id="ab-save" onclick="abSave()">Сохранить</button><button type="button" class="btn" onclick="abClose()">Отмена</button></div></div>`;
+ document.body.appendChild(o);abDraw()}
+function abClose(){const o=$('#abm');if(o)o.remove();AB=null}
+function abDraw(){if(!AB)return;$('#ab-sk').innerHTML=AB.skills.map((x,i)=>`<span class="pchip">${esc(x)}<button type="button" aria-label="Убрать" onclick="AB.skills.splice(${i},1);abDraw()">×</button></span>`).join('');$('#ab-pc').textContent=AB.photos.length+' из 12';$('#ab-ph').innerHTML=AB.photos.map((x,i)=>`<div class="pgi"><img src="${String(x).startsWith('data:')?x:IMG(x,300)}" alt=""><button type="button" aria-label="Убрать" onclick="AB.photos.splice(${i},1);abDraw()">×</button></div>`).join('')+(AB.photos.length<12?`<button type="button" class="pga" onclick="$('#ab-f').click()">${ico('plus')}</button>`:'')}
+function abSkill(){const i=$('#ab-skin'),t=(i.value||'').replace(/[|,]/g,' ').trim();if(t.length<2)return;if(AB.skills.length>=8){toast('Не больше 8 навыков',1);return}if(!AB.skills.includes(t))AB.skills.push(t.slice(0,24));i.value='';abDraw()}
+async function abFiles(inp){const fs=[...inp.files].slice(0,12-AB.photos.length);inp.value='';for(const f of fs){try{AB.photos.push(await prep(f,1280))}catch(e){toast('Не удалось прочитать фото',1)}}abDraw()}
+async function abSave(){abSkill();const b=$('#ab-save');if(b){b.disabled=true;b.textContent='Сохраняем…'}try{await api('about',{bio:$('#ab-bio').value.trim(),skills:AB.skills,prices:$('#ab-pr').value.trim()});const ids=await upImgs(AB.photos);await api('portfolio',{ids});toast('Профиль сохранён');abClose();vProfile(PRP)}catch(e){if(b){b.disabled=false;b.textContent='Сохранить'}}}
+async function vProfile(pid){$('#app').innerHTML='<main class="page">'+skel(3)+'</main>';let j;try{j=await api('profile',{pid})}catch(e){go('home');return}if(V!=='u')return;RR=0;PRJ=j;PRP=pid;PTAB=0;const blk=isBlk(pid);
+ const bar=(!j.me&&!blk)?`<div class="pbar"><button type="button" class="btn" onclick="pOffer()">Предложить задачу</button><button type="button" class="btn pri" onclick="pWrite()">Написать</button></div>`:'';
+ $('#app').innerHTML=`<main class="page${bar?' hb':''}"><a class="back" onclick="PREV&&history.length>1?history.back():go('list')">${ico('arrow')}Назад</a><div class="prof pub">${!j.me?`<div class="ad-top"><button type="button" class="fv" aria-label="Ещё" onclick="advMenu(event)">${ico('more')}</button></div><div class="mnu" id="mnu" hidden><button type="button" onclick="$('#mnu').hidden=true;togBlk('${pid}','${esc(j.name)}')">${ico('eyeoff')}${blk?'Разблокировать':'Заблокировать'}</button><button type="button" onclick="$('#mnu').hidden=true;repSheet('user:${pid}','Пожаловаться')">${ico('alert')}Пожаловаться</button></div>`:''}<div class="pbody"><span class="pav${j.free?' free':''}">${av(j.name,j.avatar,'xl')}</span><div class="pm"><b class="pn">${esc(j.name)}</b>${j.ver?`<span class="vb vbw" onclick="vInfo(event)">${VERI}Подтверждённый</span>`:''}${j.bio?`<div class="pbi mu">${esc(j.bio)}</div>`:''}</div></div><div class="pchips">${j.free?'<span class="pchip ok">⚡ Свободен сегодня</span>':''}${j.dn?`<span class="pchip ok">Выполнено: ${j.dn}</span>`:''}${j.created?`<span class="pchip">${esc(since(j.created))}</span>`:''}</div>${j.me?`<button type="button" class="fsw pfr" onclick="pFree(${!j.free})"><span><b>Свободен сегодня</b><small class="mu">Заказчики увидят отметку до конца дня</small></span><i class="gsw${j.free?' on':''}" aria-hidden="true"></i></button>`:''}</div>${pHero(j)}<div class="ptabs" id="ptabs">${pTabs(j)}</div><div id="pcont">${pCont(j)}</div>${bar}</main>`;rv()}
 function theme(t){const d=document.documentElement;t=typeof t==='string'?t:d.dataset.theme==='dark'?'light':'dark';d.dataset.theme=t;try{localStorage.setItem('gig_t',t)}catch(e){}$('#th').innerHTML=ico(t==='dark'?'sun':'moon')}
 (()=>{let t;try{t=localStorage.getItem('gig_t')}catch(e){}theme(t||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))})();
 const PHONE=Math.min(screen.width,screen.height)<700;let VM='';try{VM=localStorage.getItem('gig_ver')||''}catch(e){}
