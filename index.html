@@ -1124,13 +1124,11 @@ html.nohs .hs{display:none}
 .fside{display:none}
 @media(min-width:1100px){
 .page.feed{max-width:1380px}
-.lw{display:grid;grid-template-columns:310px minmax(0,1fr);gap:28px;align-items:start}
-.fside{display:grid;gap:12px;align-content:start;position:sticky;top:78px;max-height:calc(100vh - 96px);overflow-y:auto;padding:16px 16px 22px;background:var(--c);border:1px solid var(--bd);border-radius:22px;scrollbar-width:thin}
 .fside .fhd2{display:flex;align-items:center;justify-content:space-between}
 .fside .fhd2 h3{margin:0;font-size:20px}
 .fside .ft{margin:10px 0 0}
 .fside .ft.first{margin-top:0}
-.lmain .cats,.lmain .sbf{display:none}
+.page.feed .lw{display:block}
 }
 /* сообщения: карточка сделки, предупреждения, папки */
 .deal{margin:0;padding:10px 14px 12px;background:var(--bg2);border-bottom:1px solid var(--bd);display:grid;gap:8px}
@@ -1401,6 +1399,13 @@ html:not(.m) .myc .swr{padding:0 2px!important}
 html:not(.m) .myc .mib{flex-direction:row;gap:6px;min-height:40px;padding:0 6px;font-size:12.5px}
 html:not(.m) .myc .mib .ic{width:17px;height:17px}
 html:not(.m) main.page.cab.my .myl{gap:12px}
+}
+
+@media(min-width:1000px){
+html:not(.m) .myc .an-box{cursor:pointer}
+html:not(.m) .myc .an-hd::after{content:'';width:7px;height:7px;margin-left:8px;border:solid var(--mu);border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px);transition:transform .2s;flex:none}
+html:not(.m) .myc .an-box.open .an-hd::after{transform:rotate(-135deg)}
+html:not(.m) .myc .an-box.open .an-bars{display:grid}
 }
 </style>
 </head><body><script>try{if(sessionStorage.getItem("gi"))document.documentElement.classList.add("noi")}catch(e){}</script><div id="intro" aria-hidden="true"><div class="intb"><div class="intl"><svg viewBox="0 0 24 24"><path d="M8 12l3 3 5-6"/></svg></div><div class="intt">Дело<span class="gt">Есть</span></div></div></div><script>try{sessionStorage.setItem("gi","1")}catch(e){}(function(){var i=document.getElementById("intro"),v=window.visualViewport;function f(){if(!i||!v)return;i.style.inset="auto";i.style.left=v.offsetLeft+"px";i.style.top=v.offsetTop+"px";i.style.width=v.width+"px";i.style.height=v.height+"px"}f();if(v)v.addEventListener("resize",f)})();setTimeout(function(){var i=document.getElementById("intro");if(i)i.remove()},1300)</script>
@@ -1854,7 +1859,7 @@ const FPT=[['','Любая оплата'],['hour','За час'],['day','За д
 const fdOn=(k,v)=>(FD[k]||'')===v?' on':'';
 function fcount(FF){return fMatch(FF).length+fMatch(FF,1).length}
 let FSIDE=0,FST=0;
-const sideOn=()=>V==='list'&&matchMedia('(min-width:1100px)').matches;
+const sideOn=()=>false;
 function fsideSync(){const a=$('#fside');if(!a)return;if(sideOn()){if(FSIDE)return;FSIDE=1;FD=F;a.innerHTML=`<div class="fhd2"><h3>Фильтры</h3><button type="button" class="fr" onclick="fReset()">Сбросить</button></div>${fBodyHtml()}`;fOvChips();['fo-min','fo-max'].forEach(i=>{$('#'+i).oninput=()=>{FD.min=$('#fo-min').value;FD.max=$('#fo-max').value;fdCnt()}});if(GEO&&!GAT)fdCityAuto()}else if(FSIDE){FSIDE=0;if(FD===F)FD=null;a.innerHTML=''}}
 function fdCnt(){if(!FD)return;if(FSIDE&&FD===F){clearTimeout(FST);FST=setTimeout(()=>{if(V!=='list')return;PG=12;fChips();draw();if(GEO)geoFill()},120)}const n=fcount(FD),t=n?'Показать '+n+' '+plr(n,'объявление','объявления','объявлений'):'Ничего не найдено';['#fshow','#wshow'].forEach(i=>{const e=$(i);if(e){e.textContent=t;e.classList.toggle('dis',!n)}});radCnt();if(FD.city&&+FD.rad>0)nbFill(FD,fdCnt)}
 function fdSet(k,v){if(!FD)return;FD[k]=v;fOvChips();fdCnt()}
@@ -2161,7 +2166,7 @@ function shareAd(id){const u=location.href.split('#')[0]+'#/ad/'+id;if(navigator
 const amini=(id,t,x,pay,city)=>{const im=x&&x.imgs&&x.imgs[0],go=x&&(x.status||'open')==='open'?` onclick="show('${id}')"`:'',pv=x?adPay(x):pay;return `<div class="amini"${go}><span class="am-th">${im?`<img src="${IMG(im,120)}" alt="" loading="lazy">`:ico(x?cic(x.category):'box')}</span><span class="am-tx"><b>${esc(t)}</b>${pv||city?`<span class="am-m">${pv?`<span class="pay sm${payC(pv)}">${payH(pv)}</span>`:''}${city?`<span class="mu">${esc(city)}</span>`:''}</span>`:''}</span>${go?'<i>›</i>':''}</div>`};
 function adAnHtml(a){const ds=a.dailyStats||{};const days=[];for(let i=6;i>=0;i--){const d=new Date(Date.now()-i*864e5),k=isoD(d),st=ds[k]||{v:0,p:0,r:0},lb=d.getDate()+'.'+String(d.getMonth()+1).padStart(2,'0');days.push({k,lb,v:+st.v||0,p:+st.p||0,r:+st.r||0})}
  const mx=Math.max(1,...days.map(d=>d.v)),tv=days.reduce((s,d)=>s+d.v,0),tp=days.reduce((s,d)=>s+d.p,0),tr=days.reduce((s,d)=>s+d.r,0);
- return `<div class="an-box"><div class="an-hd"><b>Аналитика за 7 дней</b><span class="anm"><span title="Просмотры">${ico('eye')}${tv}</span><span title="Открыли телефон">${ico('phone')}${tp}</span><span title="Отклики">${ico('chat')}${tr}</span></span></div><div class="an-bars">${days.map(d=>{const h=d.v?Math.max(14,Math.round(d.v*100/mx)):6;return `<div class="an-col" title="${d.lb}: просм. ${d.v}, тел. ${d.p}, откл. ${d.r}"><b>${d.v}</b><div class="an-b"><i class="${d.v?'':'z'}" style="height:${h}%"></i></div><span>${d.lb}</span></div>`}).join('')}</div></div>`}
+ return `<div class="an-box" onclick="this.classList.toggle('open')"><div class="an-hd"><b>Аналитика за 7 дней</b><span class="anm"><span title="Просмотры">${ico('eye')}${tv}</span><span title="Открыли телефон">${ico('phone')}${tp}</span><span title="Отклики">${ico('chat')}${tr}</span></span></div><div class="an-bars">${days.map(d=>{const h=d.v?Math.max(14,Math.round(d.v*100/mx)):6;return `<div class="an-col" title="${d.lb}: просм. ${d.v}, тел. ${d.p}, откл. ${d.r}"><b>${d.v}</b><div class="an-b"><i class="${d.v?'':'z'}" style="height:${h}%"></i></div><span>${d.lb}</span></div>`}).join('')}</div></div>`}
 async function republishAd(id){try{await api('republish',{id});ADF=false;toast('Объявление опубликовано снова и поднято в ленте','ok');vCab()}catch(e){}}
 async function toggleAutoRenew(id,on){try{await api('autoRenew',{id,on});toast(on?'Автопродление включено':'Автопродление выключено','ok');vCab()}catch(e){}}
 const myCard=a=>{const im=a.imgs&&a.imgs[0],op=a.status==='open',hid=a.status==='hidden',upd=+a.upd||+a.ts,old=op&&Date.now()-upd>14*864e5,sc=({open:['Активно','ok'],closed:['Снято','mu'],hidden:['Скрыто','er']})[a.status]||[a.status,'mu'],go1=op?` onclick="show('${a.id}')"`:'',bt=(t,ic,fn,cl)=>`<button type="button" class="btn mib${cl?' '+cl:''}" title="${t}" aria-label="${t}" onclick="${fn}">${ico(ic)}<span>${t}</span></button>`;return `<article class="card ad2 myc" data-ci="${Math.max(0,CN.indexOf(a.category))}"><div class="cth${im?'':' ph'}"${go1}>${im?`<img src="${IMG(a.imgs[0],300)}" alt="" loading="lazy">${a.imgs.length>1?`<span class="cn">${ico('camera')}${a.imgs.length}</span>`:''}`:ico(cic(a.category))}</div><div class="cbd"${go1}><div class="chd"><div class="ctg"><span class="tag ${a.type===TYPES[0]?'w':'s'}">${esc(a.type)}</span>${a.urgent?'<span class="tag urg">Срочно</span>':''} ${cchip(a.category)}</div></div><div class="pay${payC(adPay(a))}">${payH(adPay(a))}</div><h4>${esc(a.title)}</h4><div class="mu cmeta">${ico('pin')}<span class="cml">${esc(locStr(a))||'Город не указан'}</span>${dstB(a)}<span class="cmt"> · ${dtS(a.up||a.ts)}</span></div></div><div class="mft"><div class="mst"><span class="st2 ${sc[1]}">${sc[0]}</span><span class="mu sm2">Обновлено ${dtS(upd)}</span></div>${adAnHtml(a)}<div class="swr" style="padding:4px 2px"><span class="mu sm2">Автопродление каждые 30 дней</span><button type="button" class="sw" role="switch" aria-checked="${!!a.autoRenew}" onclick="toggleAutoRenew('${a.id}',${!a.autoRenew})"></button></div>${old?`<div class="rnw"><span>Ещё актуально? Без подтверждения объявление снимется через ${Math.max(1,30-Math.floor((Date.now()-upd)/864e5))} дн.</span><button class="btn sm pri" onclick="adAct('renew','${a.id}','Объявление продлено')">Да</button></div>`:''}<div class="mbt">${op||hid?bt('Изменить','edit',`editAd('${a.id}')`):''}${op?bt('Снять','eyeoff',`st('${a.id}','closed')`,'dg'):''}${!op&&!hid?bt('Опубликовать снова','pub',`republishAd('${a.id}')`,'ok'):''}${op?bt(a.urgent?'Без «Срочно»':'Срочно','spark',`adAct('urgent','${a.id}','${a.urgent?'Метка снята':'Метка «Срочно» на 3 дня'}',${a.urgent?'false':'true'})`,a.urgent?'on':'')+bt('Поделиться','nodes',`shareSheet('${a.id}')`):''}${!op&&!hid?bt('Удалить','trash',`delAd('${a.id}')`,'dg'):''}</div></div></article>`};
